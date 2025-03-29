@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp
 {
-    partial class frmUpdate
+    partial class frmStdUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -37,14 +37,15 @@
             lblRowsMsg = new Label();
             lblChoose = new Label();
             lblWelcome = new Label();
-            txtAddr = new TextBox();
+            txtPhone = new TextBox();
             txtLName = new TextBox();
             txtFName = new TextBox();
             txtId = new TextBox();
-            comboStd = new ComboBox();
+            comboAll = new ComboBox();
             label5 = new Label();
-            dgvStd = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvStd).BeginInit();
+            dgvAll = new DataGridView();
+            separator = new GroupBox();
+            ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
             // label4
@@ -54,9 +55,9 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(36, 358);
             label4.Name = "label4";
-            label4.Size = new Size(73, 26);
+            label4.Size = new Size(60, 26);
             label4.TabIndex = 22;
-            label4.Text = "Address";
+            label4.Text = "Phone";
             // 
             // label3
             // 
@@ -87,9 +88,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(37, 121);
             label1.Name = "label1";
-            label1.Size = new Size(89, 26);
+            label1.Size = new Size(27, 26);
             label1.TabIndex = 25;
-            label1.Text = "Student ID";
+            label1.Text = "ID";
             // 
             // btnBack
             // 
@@ -122,11 +123,11 @@
             lblRowsMsg.AutoSize = true;
             lblRowsMsg.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRowsMsg.ForeColor = Color.DodgerBlue;
-            lblRowsMsg.Location = new Point(436, 330);
+            lblRowsMsg.Location = new Point(436, 329);
             lblRowsMsg.Name = "lblRowsMsg";
-            lblRowsMsg.Size = new Size(13, 23);
+            lblRowsMsg.Size = new Size(104, 23);
             lblRowsMsg.TabIndex = 17;
-            lblRowsMsg.Text = ".";
+            lblRowsMsg.Text = "1 Row Affected";
             // 
             // lblChoose
             // 
@@ -146,16 +147,16 @@
             lblWelcome.ForeColor = Color.White;
             lblWelcome.Location = new Point(34, 36);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(299, 50);
+            lblWelcome.Size = new Size(263, 50);
             lblWelcome.TabIndex = 19;
-            lblWelcome.Text = "\"Update\" Operation";
+            lblWelcome.Text = "Update Students";
             // 
-            // txtAddr
+            // txtPhone
             // 
-            txtAddr.Location = new Point(41, 387);
-            txtAddr.Name = "txtAddr";
-            txtAddr.Size = new Size(274, 27);
-            txtAddr.TabIndex = 13;
+            txtPhone.Location = new Point(41, 387);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(274, 27);
+            txtPhone.TabIndex = 13;
             // 
             // txtLName
             // 
@@ -179,44 +180,54 @@
             txtId.Size = new Size(274, 27);
             txtId.TabIndex = 16;
             // 
-            // comboStd
+            // comboAll
             // 
-            comboStd.FormattingEnabled = true;
-            comboStd.Location = new Point(436, 149);
-            comboStd.Name = "comboStd";
-            comboStd.Size = new Size(331, 28);
-            comboStd.TabIndex = 26;
-            comboStd.SelectedIndexChanged += comboStd_SelectedIndexChanged;
+            comboAll.FormattingEnabled = true;
+            comboAll.Location = new Point(441, 285);
+            comboAll.Name = "comboAll";
+            comboAll.Size = new Size(331, 28);
+            comboAll.TabIndex = 26;
+            comboAll.SelectedIndexChanged += comboStd_SelectedIndexChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(431, 120);
+            label5.Location = new Point(436, 256);
             label5.Name = "label5";
             label5.Size = new Size(119, 26);
             label5.TabIndex = 25;
             label5.Text = "Select Student";
             // 
-            // dgvStd
+            // dgvAll
             // 
-            dgvStd.BackgroundColor = SystemColors.ControlLight;
-            dgvStd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStd.Location = new Point(436, 183);
-            dgvStd.Name = "dgvStd";
-            dgvStd.RowHeadersWidth = 51;
-            dgvStd.Size = new Size(331, 135);
-            dgvStd.TabIndex = 27;
+            dgvAll.BackgroundColor = SystemColors.ControlLight;
+            dgvAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAll.Dock = DockStyle.Bottom;
+            dgvAll.Location = new Point(0, 457);
+            dgvAll.Name = "dgvAll";
+            dgvAll.RowHeadersWidth = 51;
+            dgvAll.Size = new Size(800, 189);
+            dgvAll.TabIndex = 27;
             // 
-            // frmUpdate
+            // separator
+            // 
+            separator.Location = new Point(442, 237);
+            separator.Name = "separator";
+            separator.Size = new Size(330, 2);
+            separator.TabIndex = 28;
+            separator.TabStop = false;
+            // 
+            // frmStdUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
-            ClientSize = new Size(800, 450);
-            Controls.Add(dgvStd);
-            Controls.Add(comboStd);
+            ClientSize = new Size(800, 646);
+            Controls.Add(separator);
+            Controls.Add(dgvAll);
+            Controls.Add(comboAll);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -227,13 +238,13 @@
             Controls.Add(lblRowsMsg);
             Controls.Add(lblChoose);
             Controls.Add(lblWelcome);
-            Controls.Add(txtAddr);
+            Controls.Add(txtPhone);
             Controls.Add(txtLName);
             Controls.Add(txtFName);
             Controls.Add(txtId);
-            Name = "frmUpdate";
-            Text = "frmUpdate";
-            ((System.ComponentModel.ISupportInitialize)dgvStd).EndInit();
+            Name = "frmStdUpdate";
+            Text = "Update Student";
+            ((System.ComponentModel.ISupportInitialize)dgvAll).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -249,12 +260,13 @@
         private Label lblRowsMsg;
         private Label lblChoose;
         private Label lblWelcome;
-        private TextBox txtAddr;
+        private TextBox txtPhone;
         private TextBox txtLName;
         private TextBox txtFName;
         private TextBox txtId;
-        private ComboBox comboStd;
+        private ComboBox comboAll;
         private Label label5;
-        private DataGridView dgvStd;
+        private DataGridView dgvAll;
+        private GroupBox separator;
     }
 }

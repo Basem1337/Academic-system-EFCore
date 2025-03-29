@@ -20,4 +20,40 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Forms\frmInsertMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Insert Forms\frmCrsSessionAttInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Insert Forms\frmCrsSessionInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Insert Forms\frmCrsInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Insert Forms\frmInstInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Insert Forms\frmDeptInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Update Forms\frmCrsSessionAttUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Update Forms\frmCrsSessionUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Update Forms\frmCrsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Update Forms\frmDeptUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Update Forms\frmInstUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

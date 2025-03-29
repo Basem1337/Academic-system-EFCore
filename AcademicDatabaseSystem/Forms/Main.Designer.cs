@@ -36,6 +36,10 @@
             lblWelcome = new Label();
             lblChoose = new Label();
             picIntro = new PictureBox();
+            btnBack = new Button();
+            linkLinkedIn = new LinkLabel();
+            linkGitHub = new LinkLabel();
+            linkBehance = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)picIntro).BeginInit();
             SuspendLayout();
             // 
@@ -125,12 +129,71 @@
             picIntro.TabIndex = 2;
             picIntro.TabStop = false;
             // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.Maroon;
+            btnBack.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(703, 12);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(85, 47);
+            btnBack.TabIndex = 23;
+            btnBack.Text = "Exit";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
+            // 
+            // linkLinkedIn
+            // 
+            linkLinkedIn.ActiveLinkColor = Color.MediumBlue;
+            linkLinkedIn.AutoSize = true;
+            linkLinkedIn.LinkColor = Color.DodgerBlue;
+            linkLinkedIn.Location = new Point(724, 421);
+            linkLinkedIn.Name = "linkLinkedIn";
+            linkLinkedIn.Size = new Size(64, 20);
+            linkLinkedIn.TabIndex = 24;
+            linkLinkedIn.TabStop = true;
+            linkLinkedIn.Text = "LinkedIn";
+            linkLinkedIn.VisitedLinkColor = Color.Violet;
+            linkLinkedIn.LinkClicked += linkLinkedIn_LinkClicked;
+            // 
+            // linkGitHub
+            // 
+            linkGitHub.ActiveLinkColor = Color.MediumBlue;
+            linkGitHub.AutoSize = true;
+            linkGitHub.LinkColor = Color.DodgerBlue;
+            linkGitHub.Location = new Point(650, 421);
+            linkGitHub.Name = "linkGitHub";
+            linkGitHub.Size = new Size(56, 20);
+            linkGitHub.TabIndex = 24;
+            linkGitHub.TabStop = true;
+            linkGitHub.Text = "GitHub";
+            linkGitHub.VisitedLinkColor = Color.Violet;
+            linkGitHub.LinkClicked += linkGitHub_LinkClicked;
+            // 
+            // linkBehance
+            // 
+            linkBehance.ActiveLinkColor = Color.MediumBlue;
+            linkBehance.AutoSize = true;
+            linkBehance.LinkColor = Color.DodgerBlue;
+            linkBehance.Location = new Point(568, 421);
+            linkBehance.Name = "linkBehance";
+            linkBehance.Size = new Size(65, 20);
+            linkBehance.TabIndex = 24;
+            linkBehance.TabStop = true;
+            linkBehance.Text = "Behance";
+            linkBehance.VisitedLinkColor = Color.Violet;
+            linkBehance.LinkClicked += linkBehance_LinkClicked;
+            // 
             // frmParent
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 450);
+            Controls.Add(linkBehance);
+            Controls.Add(linkGitHub);
+            Controls.Add(linkLinkedIn);
+            Controls.Add(btnBack);
             Controls.Add(picIntro);
             Controls.Add(lblChoose);
             Controls.Add(lblWelcome);
@@ -154,5 +217,9 @@
         private Label lblWelcome;
         private Label lblChoose;
         private PictureBox picIntro;
+        private Button btnBack;
+        private LinkLabel linkLinkedIn;
+        private LinkLabel linkGitHub;
+        private LinkLabel linkBehance;
     }
 }

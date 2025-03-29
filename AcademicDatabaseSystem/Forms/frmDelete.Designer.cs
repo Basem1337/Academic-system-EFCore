@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             dgvStd = new DataGridView();
-            comboStd = new ComboBox();
+            comboAll = new ComboBox();
             lblChoose = new Label();
             lblWelcome = new Label();
             btnBack = new Button();
             btnDelete = new Button();
             lblRowsMsg = new Label();
+            comboRecord = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvStd).BeginInit();
             SuspendLayout();
             // 
@@ -49,14 +50,14 @@
             dgvStd.Size = new Size(800, 212);
             dgvStd.TabIndex = 15;
             // 
-            // comboStd
+            // comboAll
             // 
-            comboStd.FormattingEnabled = true;
-            comboStd.Location = new Point(37, 101);
-            comboStd.Name = "comboStd";
-            comboStd.Size = new Size(331, 28);
-            comboStd.TabIndex = 14;
-            comboStd.SelectedIndexChanged += comboStd_SelectedIndexChanged;
+            comboAll.FormattingEnabled = true;
+            comboAll.Location = new Point(37, 101);
+            comboAll.Name = "comboAll";
+            comboAll.Size = new Size(331, 28);
+            comboAll.TabIndex = 14;
+            comboAll.SelectedIndexChanged += comboStd_SelectedIndexChanged;
             // 
             // lblChoose
             // 
@@ -65,9 +66,9 @@
             lblChoose.ForeColor = Color.DarkGray;
             lblChoose.Location = new Point(37, 66);
             lblChoose.Name = "lblChoose";
-            lblChoose.Size = new Size(241, 23);
+            lblChoose.Size = new Size(319, 23);
             lblChoose.TabIndex = 12;
-            lblChoose.Text = "Please, Choose a student to delete.";
+            lblChoose.Text = "Please, Choose a record from a table to delete.";
             // 
             // lblWelcome
             // 
@@ -76,9 +77,9 @@
             lblWelcome.ForeColor = Color.White;
             lblWelcome.Location = new Point(30, 16);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(284, 50);
+            lblWelcome.Size = new Size(112, 50);
             lblWelcome.TabIndex = 13;
-            lblWelcome.Text = "\"Delete\" Operation";
+            lblWelcome.Text = "Delete";
             // 
             // btnBack
             // 
@@ -113,9 +114,17 @@
             lblRowsMsg.ForeColor = Color.DodgerBlue;
             lblRowsMsg.Location = new Point(37, 204);
             lblRowsMsg.Name = "lblRowsMsg";
-            lblRowsMsg.Size = new Size(13, 23);
+            lblRowsMsg.Size = new Size(182, 23);
             lblRowsMsg.TabIndex = 18;
-            lblRowsMsg.Text = ".";
+            lblRowsMsg.Text = "1 Row Deleted Successfully";
+            // 
+            // comboRecord
+            // 
+            comboRecord.FormattingEnabled = true;
+            comboRecord.Location = new Point(412, 101);
+            comboRecord.Name = "comboRecord";
+            comboRecord.Size = new Size(331, 28);
+            comboRecord.TabIndex = 19;
             // 
             // frmDelete
             // 
@@ -123,15 +132,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboRecord);
             Controls.Add(lblRowsMsg);
             Controls.Add(dgvStd);
-            Controls.Add(comboStd);
+            Controls.Add(comboAll);
             Controls.Add(lblChoose);
             Controls.Add(lblWelcome);
             Controls.Add(btnBack);
             Controls.Add(btnDelete);
             Name = "frmDelete";
-            Text = "Delete Student";
+            Text = "Delete";
             ((System.ComponentModel.ISupportInitialize)dgvStd).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -140,11 +150,12 @@
         #endregion
 
         private DataGridView dgvStd;
-        private ComboBox comboStd;
+        private ComboBox comboAll;
         private Label lblChoose;
         private Label lblWelcome;
         private Button btnBack;
         private Button btnDelete;
         private Label lblRowsMsg;
+        private ComboBox comboRecord;
     }
 }
