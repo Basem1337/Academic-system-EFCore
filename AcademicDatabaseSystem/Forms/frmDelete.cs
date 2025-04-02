@@ -20,6 +20,8 @@ namespace WinFormsApp
                 "Instructors",
                 "Courses",
                 "Departments",
+                "Course Sessions",
+                "Course Sessions Attendance"
             };
         }
 
@@ -52,6 +54,20 @@ namespace WinFormsApp
                     db.Departments.Load();
                     comboRecord.DataSource = db.Departments.Local.Select(d => d.Dept_Name).ToList();
                     dgvStd.DataSource = db.Departments.Local.ToBindingList();
+                    break;
+                case "Course Sessions":
+                    db.Crs_Sessions.Load();
+                    comboRecord.DataSource = db.Crs_Sessions.Local.Select(d => new { d.CrsSID , d.Title}).ToList();
+                    comboRecord.DisplayMember = "Title";
+                    comboRecord.ValueMember = "CrsSID";
+                    dgvStd.DataSource = db.Crs_Sessions.Local.ToBindingList();
+                    break;
+                case "Course Sessions Attendance":
+                    db.CrsSessionAtts.Load();
+                    comboRecord.DataSource = db.CrsSessionAtts.Local.Select(d => new { d.CrsSAID , d.Notes}).ToList();
+                    comboRecord.DisplayMember = "Notes";
+                    comboRecord.ValueMember = "CrsSAID";
+                    dgvStd.DataSource = db.CrsSessionAtts.Local.ToBindingList();
                     break;
             }
         }
@@ -91,6 +107,18 @@ namespace WinFormsApp
                         db.Departments.Load();
                         var delDept = db.Departments.Local.FirstOrDefault(c => c.Dept_Name == comboRecord.Text);
                         db.Departments.Remove(delDept);
+                        db.SaveChanges();
+                        break;
+                    case "Course Sessions":
+                        db.Crs_Sessions.Load();
+                        var delCrsS = db.Crs_Sessions.Local.FirstOrDefault(c => c.Title == comboRecord.Text);
+                        db.Crs_Sessions.Remove(delCrsS);
+                        db.SaveChanges();
+                        break;
+                    case "Course Sessions Attendance":
+                        db.CrsSessionAtts.Load();
+                        var delCrsSAtt = db.CrsSessionAtts.Local.FirstOrDefault(c => c.Notes == comboRecord.Text);
+                        db.CrsSessionAtts.Remove(delCrsSAtt);
                         db.SaveChanges();
                         break;
                 }

@@ -49,6 +49,9 @@
             label6 = new Label();
             txtDeptID = new TextBox();
             label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -259,12 +262,48 @@
             label7.TabIndex = 22;
             label7.Text = "Department ID";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.IndianRed;
+            label8.Location = new Point(124, 190);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 36);
+            label8.TabIndex = 37;
+            label8.Text = "*";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.IndianRed;
+            label9.Location = new Point(124, 272);
+            label9.Name = "label9";
+            label9.Size = new Size(25, 36);
+            label9.TabIndex = 37;
+            label9.Text = "*";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.IndianRed;
+            label10.Location = new Point(552, 182);
+            label10.Name = "label10";
+            label10.Size = new Size(25, 36);
+            label10.TabIndex = 38;
+            label10.Text = "*";
+            // 
             // frmInstUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 646);
+            Controls.Add(label10);
+            Controls.Add(label9);
+            Controls.Add(label8);
             Controls.Add(separator);
             Controls.Add(dgvAll);
             Controls.Add(comboAll);
@@ -317,5 +356,8 @@
         private Label label6;
         private TextBox txtDeptID;
         private Label label7;
+        private Label label8;
+        private Label label9;
+        private Label label10;
     }
 }

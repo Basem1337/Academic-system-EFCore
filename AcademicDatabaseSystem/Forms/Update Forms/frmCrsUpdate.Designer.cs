@@ -47,6 +47,9 @@
             separator = new GroupBox();
             txtInstID = new TextBox();
             label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -241,12 +244,48 @@
             label6.TabIndex = 22;
             label6.Text = "Instructor ID";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.IndianRed;
+            label7.Location = new Point(148, 190);
+            label7.Name = "label7";
+            label7.Size = new Size(25, 36);
+            label7.TabIndex = 37;
+            label7.Text = "*";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.IndianRed;
+            label8.Location = new Point(150, 352);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 36);
+            label8.TabIndex = 38;
+            label8.Text = "*";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.IndianRed;
+            label9.Location = new Point(536, 115);
+            label9.Name = "label9";
+            label9.Size = new Size(25, 36);
+            label9.TabIndex = 39;
+            label9.Text = "*";
+            // 
             // frmCrsUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 646);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(separator);
             Controls.Add(dgvAll);
             Controls.Add(comboAll);
@@ -295,5 +334,8 @@
         private GroupBox separator;
         private TextBox txtInstID;
         private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
     }
 }

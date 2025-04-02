@@ -69,6 +69,14 @@ namespace WinFormsApp
 
             lblRowsMsg.Hide();
 
+            if (string.IsNullOrWhiteSpace(txtDeptName.Text) || string.IsNullOrWhiteSpace(txtManager.Text))
+            {
+                lblRowsMsg.ForeColor = Color.Red;
+                lblRowsMsg.Text = "There are fields that cannot be empty..";
+                lblRowsMsg.Show();
+                return;
+            }
+
             if (!op1 || !op2 || !op3)
             {
                 toUpdate.Dept_Name = txtDeptName.Text;

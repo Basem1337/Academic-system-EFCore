@@ -22,6 +22,16 @@ namespace WinFormsApp
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            lblRowsMsg.Hide();
+
+            if (string.IsNullOrWhiteSpace(txtInsID.Text) || string.IsNullOrWhiteSpace(txtCrsID.Text) || string.IsNullOrWhiteSpace(txtDate.Text))
+            {
+                lblRowsMsg.ForeColor = Color.Red;
+                lblRowsMsg.Text = "There are fields that cannot be empty..";
+                lblRowsMsg.Show();
+                return;
+            }
+
             CourseSession newRecord = new()
             {
                 CrsID = Convert.ToInt32(txtCrsID.Text),
@@ -32,6 +42,8 @@ namespace WinFormsApp
 
             db.Crs_Sessions.Add(newRecord);
             db.SaveChanges();
+            lblRowsMsg.ForeColor = Color.DodgerBlue;
+            lblRowsMsg.Text = "1 Row Added Successfully";
             lblRowsMsg.Show();
         }
 

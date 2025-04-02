@@ -55,14 +55,14 @@ namespace AcademicDatabaseSystem.Forms
 
         private void btnCSUpdate_Click(object sender, EventArgs e)
         {
-            frmCrsSessionUpdate updateFrm = new frmCrsSessionUpdate();
+            frmCrsSessionInsert updateFrm = new frmCrsSessionInsert();
             updateFrm.Show();
             this.Close();
         }
 
         private void btnCSAUpdate_Click(object sender, EventArgs e)
         {
-            frmCrsSessionAttUpdate updateFrm = new frmCrsSessionAttUpdate();
+            frmCrsSessionAttInsert updateFrm = new frmCrsSessionAttInsert();
             updateFrm.Show();
             this.Close();
         }

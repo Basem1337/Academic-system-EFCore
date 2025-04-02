@@ -22,6 +22,16 @@ namespace WinFormsApp
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            lblRowsMsg.Hide();
+
+            if (string.IsNullOrWhiteSpace(txtDeptName.Text) || string.IsNullOrWhiteSpace(txtManagerID.Text))
+            {
+                lblRowsMsg.ForeColor = Color.Red;
+                lblRowsMsg.Text = "There are fields that cannot be empty..";
+                lblRowsMsg.Show();
+                return;
+            }
+
             Department newRecord = new()
             {
                 Dept_Name = txtDeptName.Text,
@@ -31,6 +41,8 @@ namespace WinFormsApp
 
             db.Departments.Add(newRecord);
             db.SaveChanges();
+            lblRowsMsg.ForeColor = Color.DodgerBlue;
+            lblRowsMsg.Text = "1 Row Added Successfully";
             lblRowsMsg.Show();
         }
 

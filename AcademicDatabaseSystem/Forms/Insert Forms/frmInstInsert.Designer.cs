@@ -43,6 +43,9 @@
             txtFName = new TextBox();
             txtDeptID = new TextBox();
             label1 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // btnBack
@@ -195,12 +198,48 @@
             label1.TabIndex = 35;
             label1.Text = "Department ID";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.IndianRed;
+            label3.Location = new Point(137, 110);
+            label3.Name = "label3";
+            label3.Size = new Size(25, 36);
+            label3.TabIndex = 37;
+            label3.Text = "*";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.IndianRed;
+            label2.Location = new Point(137, 185);
+            label2.Name = "label2";
+            label2.Size = new Size(25, 36);
+            label2.TabIndex = 37;
+            label2.Text = "*";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.IndianRed;
+            label4.Location = new Point(547, 110);
+            label4.Name = "label4";
+            label4.Size = new Size(25, 36);
+            label4.TabIndex = 37;
+            label4.Text = "*";
+            // 
             // frmInstInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
+            Controls.Add(label2);
+            Controls.Add(label3);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label7);
@@ -238,5 +277,8 @@
         private TextBox txtFName;
         private TextBox txtDeptID;
         private Label label1;
+        private Label label3;
+        private Label label2;
+        private Label label4;
     }
 }

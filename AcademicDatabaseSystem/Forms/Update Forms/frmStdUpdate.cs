@@ -1,6 +1,7 @@
 ﻿using AcademicDatabaseSystem.Context;
 using AcademicDatabaseSystem.Forms;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace WinFormsApp
 {
@@ -67,7 +68,16 @@ namespace WinFormsApp
             bool op2 = toUpdate.St_LName == txtLName.Text;
             bool op3 = toUpdate.St_Phone == txtPhone.Text;
 
+
             lblRowsMsg.Hide();
+
+            if (string.IsNullOrWhiteSpace(txtFName.Text) || string.IsNullOrWhiteSpace(txtLName.Text))
+            {
+                lblRowsMsg.ForeColor = Color.Red;
+                lblRowsMsg.Text = "There are fields that cannot be empty..";
+                lblRowsMsg.Show();
+                return;
+            }
 
             if (!op1 || !op2 || !op3)
             {

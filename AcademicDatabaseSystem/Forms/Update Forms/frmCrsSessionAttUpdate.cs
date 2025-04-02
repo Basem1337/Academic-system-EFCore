@@ -76,6 +76,14 @@ namespace WinFormsApp
 
             lblRowsMsg.Hide();
 
+            if (string.IsNullOrWhiteSpace(txtStdID.Text) || string.IsNullOrWhiteSpace(txtCrsSessionID.Text))
+            {
+                lblRowsMsg.ForeColor = Color.Red;
+                lblRowsMsg.Text = "There are fields that cannot be empty..";
+                lblRowsMsg.Show();
+                return;
+            }
+
             if (!op1 || !op2 || !op3 || !op4)
             {
                 toUpdate.StdID = Convert.ToInt32(txtStdID.Text);

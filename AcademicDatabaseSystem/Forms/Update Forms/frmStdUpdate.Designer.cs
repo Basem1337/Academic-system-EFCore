@@ -45,6 +45,8 @@
             label5 = new Label();
             dgvAll = new DataGridView();
             separator = new GroupBox();
+            label6 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -219,12 +221,36 @@
             separator.TabIndex = 28;
             separator.TabStop = false;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.IndianRed;
+            label6.Location = new Point(123, 190);
+            label6.Name = "label6";
+            label6.Size = new Size(25, 36);
+            label6.TabIndex = 37;
+            label6.Text = "*";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.IndianRed;
+            label7.Location = new Point(123, 272);
+            label7.Name = "label7";
+            label7.Size = new Size(25, 36);
+            label7.TabIndex = 37;
+            label7.Text = "*";
+            // 
             // frmStdUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 646);
+            Controls.Add(label7);
+            Controls.Add(label6);
             Controls.Add(separator);
             Controls.Add(dgvAll);
             Controls.Add(comboAll);
@@ -268,5 +294,7 @@
         private Label label5;
         private DataGridView dgvAll;
         private GroupBox separator;
+        private Label label6;
+        private Label label7;
     }
 }

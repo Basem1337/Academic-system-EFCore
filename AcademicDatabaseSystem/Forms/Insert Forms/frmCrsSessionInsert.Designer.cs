@@ -41,6 +41,9 @@
             txtTitle = new TextBox();
             txtInsID = new TextBox();
             txtCrsID = new TextBox();
+            label3 = new Label();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // btnBack
@@ -174,12 +177,48 @@
             txtCrsID.Size = new Size(274, 27);
             txtCrsID.TabIndex = 29;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.IndianRed;
+            label3.Location = new Point(130, 110);
+            label3.Name = "label3";
+            label3.Size = new Size(25, 36);
+            label3.TabIndex = 37;
+            label3.Text = "*";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.IndianRed;
+            label1.Location = new Point(147, 185);
+            label1.Name = "label1";
+            label1.Size = new Size(25, 36);
+            label1.TabIndex = 37;
+            label1.Text = "*";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.IndianRed;
+            label2.Location = new Point(92, 347);
+            label2.Name = "label2";
+            label2.Size = new Size(25, 36);
+            label2.TabIndex = 37;
+            label2.Text = "*";
+            // 
             // frmCrsSessionInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(label3);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label7);
@@ -213,5 +252,8 @@
         private TextBox txtTitle;
         private TextBox txtInsID;
         private TextBox txtCrsID;
+        private Label label3;
+        private Label label1;
+        private Label label2;
     }
 }

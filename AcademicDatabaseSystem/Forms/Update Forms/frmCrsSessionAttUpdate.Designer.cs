@@ -47,6 +47,8 @@
             separator = new GroupBox();
             txtNotes = new TextBox();
             label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -241,12 +243,38 @@
             label6.TabIndex = 22;
             label6.Text = "Notes";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.IndianRed;
+            label7.Location = new Point(181, 272);
+            label7.Name = "label7";
+            label7.Size = new Size(25, 36);
+            label7.TabIndex = 37;
+            label7.Text = "*";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.IndianRed;
+            label8.Location = new Point(119, 190);
+            label8.Name = "label8";
+            label8.Size = new Size(25, 36);
+            label8.TabIndex = 37;
+            label8.Text = "*";
+            // 
             // frmCrsSessionAttUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(28, 35, 47);
             ClientSize = new Size(800, 646);
+            Controls.Add(label8);
+            Controls.Add(label7);
             Controls.Add(separator);
             Controls.Add(dgvAll);
             Controls.Add(comboAll);
@@ -295,5 +323,7 @@
         private GroupBox separator;
         private TextBox txtNotes;
         private Label label6;
+        private Label label7;
+        private Label label8;
     }
 }
