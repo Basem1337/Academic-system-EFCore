@@ -70,6 +70,25 @@ namespace WinFormsApp
                     comboRecord.DisplayMember = "Dept_Name";
                     comboRecord.ValueMember = "Dept_ID";
                     break;
+                case "Student Courses":
+                    comboRecord.Text = "";
+                    comboRecord.Enabled = false;
+                    btnSelect.Enabled = false;
+                    break;
+                case "Course Sessions":
+                    db.Crs_Sessions.Load();
+                    comboRecord.Enabled = true;
+                    btnSelect.Enabled = true;
+                    comboRecord.DataSource = db.Crs_Sessions.Local.Select(d => d.Title).ToList();
+                    comboRecord.DisplayMember = "Title";
+                    break;
+                case "Course Sessions Attendance":
+                    db.CrsSessionAtts.Load();
+                    comboRecord.Enabled = true;
+                    btnSelect.Enabled = true;
+                    comboRecord.DataSource = db.CrsSessionAtts.Local.Select(d => d.Notes).ToList();
+                    comboRecord.DisplayMember = "Notes";
+                    break;
             }
         }
 
@@ -127,6 +146,14 @@ namespace WinFormsApp
                 case "Departments":
                     db.Departments.Load();
                     dgvStd.DataSource = db.Departments.Local.Where(d => d.Dept_Name == comboRecord.Text).ToList();
+                    break;
+                case "Course Sessions":
+                    db.Crs_Sessions.Load();
+                    dgvStd.DataSource = db.Crs_Sessions.Local.Where(d => d.Title == comboRecord.Text).ToList();
+                    break;
+                case "Course Sessions Attendance":
+                    db.CrsSessionAtts.Load();
+                    dgvStd.DataSource = db.CrsSessionAtts.Local.Where(d => d.Notes == comboRecord.Text).ToList();
                     break;
             }
         }

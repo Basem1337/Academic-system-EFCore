@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateMain));
-            picIntro = new PictureBox();
             lblChoose = new Label();
             lblWelcome = new Label();
             btnBack = new Button();
@@ -39,20 +37,7 @@
             btnStdUpdate = new Button();
             btnCSUpdate = new Button();
             btnCSAUpdate = new Button();
-            ((System.ComponentModel.ISupportInitialize)picIntro).BeginInit();
             SuspendLayout();
-            // 
-            // picIntro
-            // 
-            picIntro.Dock = DockStyle.Right;
-            picIntro.Image = (Image)resources.GetObject("picIntro.Image");
-            picIntro.ImageLocation = "";
-            picIntro.Location = new Point(487, 0);
-            picIntro.Name = "picIntro";
-            picIntro.Size = new Size(313, 450);
-            picIntro.SizeMode = PictureBoxSizeMode.StretchImage;
-            picIntro.TabIndex = 5;
-            picIntro.TabStop = false;
             // 
             // lblChoose
             // 
@@ -78,12 +63,13 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(46, 64, 116);
+            btnBack.BackColor = Color.FromArgb(85, 134, 140);
+            btnBack.FlatStyle = FlatStyle.Popup;
             btnBack.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(241, 365);
+            btnBack.Location = new Point(40, 353);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(150, 47);
+            btnBack.Size = new Size(182, 47);
             btnBack.TabIndex = 22;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
@@ -91,12 +77,13 @@
             // 
             // btnCrsUpdate
             // 
-            btnCrsUpdate.BackColor = Color.FromArgb(47, 82, 189);
+            btnCrsUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnCrsUpdate.FlatStyle = FlatStyle.Popup;
             btnCrsUpdate.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCrsUpdate.ForeColor = Color.White;
-            btnCrsUpdate.Location = new Point(40, 365);
+            btnCrsUpdate.Location = new Point(40, 214);
             btnCrsUpdate.Name = "btnCrsUpdate";
-            btnCrsUpdate.Size = new Size(150, 47);
+            btnCrsUpdate.Size = new Size(182, 56);
             btnCrsUpdate.TabIndex = 23;
             btnCrsUpdate.Text = "Courses";
             btnCrsUpdate.UseVisualStyleBackColor = false;
@@ -104,12 +91,13 @@
             // 
             // btnDeptUpdate
             // 
-            btnDeptUpdate.BackColor = Color.FromArgb(47, 82, 189);
+            btnDeptUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnDeptUpdate.FlatStyle = FlatStyle.Popup;
             btnDeptUpdate.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDeptUpdate.ForeColor = Color.White;
-            btnDeptUpdate.Location = new Point(40, 288);
+            btnDeptUpdate.Location = new Point(442, 139);
             btnDeptUpdate.Name = "btnDeptUpdate";
-            btnDeptUpdate.Size = new Size(150, 47);
+            btnDeptUpdate.Size = new Size(182, 56);
             btnDeptUpdate.TabIndex = 24;
             btnDeptUpdate.Text = "Departments";
             btnDeptUpdate.UseVisualStyleBackColor = false;
@@ -117,12 +105,13 @@
             // 
             // btnInstUpdate
             // 
-            btnInstUpdate.BackColor = Color.FromArgb(47, 82, 189);
+            btnInstUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnInstUpdate.FlatStyle = FlatStyle.Popup;
             btnInstUpdate.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInstUpdate.ForeColor = Color.White;
-            btnInstUpdate.Location = new Point(40, 214);
+            btnInstUpdate.Location = new Point(241, 139);
             btnInstUpdate.Name = "btnInstUpdate";
-            btnInstUpdate.Size = new Size(150, 47);
+            btnInstUpdate.Size = new Size(182, 56);
             btnInstUpdate.TabIndex = 25;
             btnInstUpdate.Text = "Instructors";
             btnInstUpdate.UseVisualStyleBackColor = false;
@@ -130,12 +119,13 @@
             // 
             // btnStdUpdate
             // 
-            btnStdUpdate.BackColor = Color.FromArgb(47, 82, 189);
+            btnStdUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnStdUpdate.FlatStyle = FlatStyle.Popup;
             btnStdUpdate.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStdUpdate.ForeColor = Color.White;
             btnStdUpdate.Location = new Point(40, 139);
             btnStdUpdate.Name = "btnStdUpdate";
-            btnStdUpdate.Size = new Size(150, 47);
+            btnStdUpdate.Size = new Size(182, 56);
             btnStdUpdate.TabIndex = 26;
             btnStdUpdate.Text = "Students";
             btnStdUpdate.UseVisualStyleBackColor = false;
@@ -143,12 +133,13 @@
             // 
             // btnCSUpdate
             // 
-            btnCSUpdate.BackColor = Color.FromArgb(47, 82, 189);
-            btnCSUpdate.Font = new Font("Poppins", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCSUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnCSUpdate.FlatStyle = FlatStyle.Popup;
+            btnCSUpdate.Font = new Font("Poppins", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCSUpdate.ForeColor = Color.White;
-            btnCSUpdate.Location = new Point(241, 139);
+            btnCSUpdate.Location = new Point(241, 214);
             btnCSUpdate.Name = "btnCSUpdate";
-            btnCSUpdate.Size = new Size(150, 47);
+            btnCSUpdate.Size = new Size(182, 56);
             btnCSUpdate.TabIndex = 26;
             btnCSUpdate.Text = "Course Sessions";
             btnCSUpdate.UseVisualStyleBackColor = false;
@@ -156,12 +147,13 @@
             // 
             // btnCSAUpdate
             // 
-            btnCSAUpdate.BackColor = Color.FromArgb(47, 82, 189);
-            btnCSAUpdate.Font = new Font("Poppins", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCSAUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnCSAUpdate.FlatStyle = FlatStyle.Popup;
+            btnCSAUpdate.Font = new Font("Poppins", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCSAUpdate.ForeColor = Color.White;
-            btnCSAUpdate.Location = new Point(241, 214);
+            btnCSAUpdate.Location = new Point(442, 214);
             btnCSAUpdate.Name = "btnCSAUpdate";
-            btnCSAUpdate.Size = new Size(150, 47);
+            btnCSAUpdate.Size = new Size(182, 56);
             btnCSAUpdate.TabIndex = 26;
             btnCSAUpdate.Text = "Course Attends";
             btnCSAUpdate.UseVisualStyleBackColor = false;
@@ -171,7 +163,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(28, 35, 47);
+            BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
             Controls.Add(btnCrsUpdate);
             Controls.Add(btnDeptUpdate);
@@ -180,19 +172,15 @@
             Controls.Add(btnCSUpdate);
             Controls.Add(btnStdUpdate);
             Controls.Add(btnBack);
-            Controls.Add(picIntro);
             Controls.Add(lblChoose);
             Controls.Add(lblWelcome);
             Name = "frmUpdateMain";
             Text = "Update";
-            ((System.ComponentModel.ISupportInitialize)picIntro).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox picIntro;
         private Label lblChoose;
         private Label lblWelcome;
         private Button btnBack;

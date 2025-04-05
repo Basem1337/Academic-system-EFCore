@@ -57,14 +57,14 @@ namespace WinFormsApp
                     break;
                 case "Course Sessions":
                     db.Crs_Sessions.Load();
-                    comboRecord.DataSource = db.Crs_Sessions.Local.Select(d => new { d.CrsSID , d.Title}).ToList();
+                    comboRecord.DataSource = db.Crs_Sessions.Local.Select(d => new { d.CrsSID, d.Title }).ToList();
                     comboRecord.DisplayMember = "Title";
                     comboRecord.ValueMember = "CrsSID";
                     dgvStd.DataSource = db.Crs_Sessions.Local.ToBindingList();
                     break;
                 case "Course Sessions Attendance":
                     db.CrsSessionAtts.Load();
-                    comboRecord.DataSource = db.CrsSessionAtts.Local.Select(d => new { d.CrsSAID , d.Notes}).ToList();
+                    comboRecord.DataSource = db.CrsSessionAtts.Local.Select(d => new { d.CrsSAID, d.Notes }).ToList();
                     comboRecord.DisplayMember = "Notes";
                     comboRecord.ValueMember = "CrsSAID";
                     dgvStd.DataSource = db.CrsSessionAtts.Local.ToBindingList();
@@ -87,7 +87,7 @@ namespace WinFormsApp
                 {
                     case "Courses":
                         db.Courses.Load();
-                        var delCrs = db.Courses.Local.FirstOrDefault(c=>c.CrsName == comboRecord.Text);
+                        var delCrs = db.Courses.Local.FirstOrDefault(c => c.CrsName == comboRecord.Text);
                         db.Courses.Remove(delCrs);
                         db.SaveChanges();
                         break;
@@ -125,6 +125,11 @@ namespace WinFormsApp
                 lblRowsMsg.Show();
             }
             FillComboBox();
+        }
+
+        private void lblRowsMsg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

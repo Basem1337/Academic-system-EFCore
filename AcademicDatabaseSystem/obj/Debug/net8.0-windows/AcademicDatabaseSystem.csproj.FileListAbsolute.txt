@@ -157,3 +157,4 @@ D:\ITI Material\LINQ - EF\Project\AcademicDatabaseSystem\obj\Debug\net8.0-window
 D:\ITI Material\LINQ - EF\Project\AcademicDatabaseSystem\obj\Debug\net8.0-windows\WinFormsApp.frmInstInsert.resources
 D:\ITI Material\LINQ - EF\Project\AcademicDatabaseSystem\obj\Debug\net8.0-windows\WinFormsApp.frmCrsSessionAttInsert.resources
 D:\ITI Material\LINQ - EF\Project\AcademicDatabaseSystem\obj\Debug\net8.0-windows\WinFormsApp.frmCrsSessionInsert.resources
+D:\ITI Material\LINQ - EF\Project\AcademicDatabaseSystem\obj\Debug\net8.0-windows\AcademicDatabaseSystem.Properties.Resources.resources

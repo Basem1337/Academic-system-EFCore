@@ -34,8 +34,8 @@
             lblWelcome = new Label();
             btnBack = new Button();
             btnDelete = new Button();
-            lblRowsMsg = new Label();
             comboRecord = new ComboBox();
+            lblRowsMsg = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvStd).BeginInit();
             SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             // comboAll
             // 
             comboAll.FormattingEnabled = true;
-            comboAll.Location = new Point(37, 101);
+            comboAll.Location = new Point(37, 115);
             comboAll.Name = "comboAll";
             comboAll.Size = new Size(331, 28);
             comboAll.TabIndex = 14;
@@ -64,7 +64,7 @@
             lblChoose.AutoSize = true;
             lblChoose.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblChoose.ForeColor = Color.DarkGray;
-            lblChoose.Location = new Point(37, 66);
+            lblChoose.Location = new Point(37, 80);
             lblChoose.Name = "lblChoose";
             lblChoose.Size = new Size(319, 23);
             lblChoose.TabIndex = 12;
@@ -75,7 +75,7 @@
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Poppins SemiBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblWelcome.ForeColor = Color.White;
-            lblWelcome.Location = new Point(30, 16);
+            lblWelcome.Location = new Point(30, 30);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(112, 50);
             lblWelcome.TabIndex = 13;
@@ -83,10 +83,11 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(46, 64, 116);
+            btnBack.BackColor = Color.FromArgb(85, 134, 140);
+            btnBack.FlatStyle = FlatStyle.Popup;
             btnBack.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(218, 146);
+            btnBack.Location = new Point(593, 160);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(150, 47);
             btnBack.TabIndex = 10;
@@ -96,10 +97,11 @@
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.FromArgb(47, 82, 189);
+            btnDelete.BackColor = Color.FromArgb(68, 187, 164);
+            btnDelete.FlatStyle = FlatStyle.Popup;
             btnDelete.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(37, 146);
+            btnDelete.Location = new Point(37, 160);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(150, 47);
             btnDelete.TabIndex = 11;
@@ -107,30 +109,30 @@
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
             // 
+            // comboRecord
+            // 
+            comboRecord.FormattingEnabled = true;
+            comboRecord.Location = new Point(412, 115);
+            comboRecord.Name = "comboRecord";
+            comboRecord.Size = new Size(331, 28);
+            comboRecord.TabIndex = 19;
+            // 
             // lblRowsMsg
             // 
             lblRowsMsg.AutoSize = true;
             lblRowsMsg.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRowsMsg.ForeColor = Color.DodgerBlue;
-            lblRowsMsg.Location = new Point(37, 204);
+            lblRowsMsg.ForeColor = Color.FromArgb(68, 187, 164);
+            lblRowsMsg.Location = new Point(297, 184);
             lblRowsMsg.Name = "lblRowsMsg";
             lblRowsMsg.Size = new Size(182, 23);
             lblRowsMsg.TabIndex = 18;
             lblRowsMsg.Text = "1 Row Deleted Successfully";
             // 
-            // comboRecord
-            // 
-            comboRecord.FormattingEnabled = true;
-            comboRecord.Location = new Point(412, 101);
-            comboRecord.Name = "comboRecord";
-            comboRecord.Size = new Size(331, 28);
-            comboRecord.TabIndex = 19;
-            // 
             // frmDelete
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(28, 35, 47);
+            BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
             Controls.Add(comboRecord);
             Controls.Add(lblRowsMsg);
@@ -155,7 +157,7 @@
         private Label lblWelcome;
         private Button btnBack;
         private Button btnDelete;
-        private Label lblRowsMsg;
         private ComboBox comboRecord;
+        private Label lblRowsMsg;
     }
 }

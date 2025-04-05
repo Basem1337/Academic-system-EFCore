@@ -45,7 +45,8 @@
             // 
             // btnSelect
             // 
-            btnSelect.BackColor = Color.FromArgb(47, 82, 189);
+            btnSelect.BackColor = Color.FromArgb(68, 187, 164);
+            btnSelect.FlatStyle = FlatStyle.Popup;
             btnSelect.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSelect.ForeColor = Color.White;
             btnSelect.Location = new Point(39, 138);
@@ -58,7 +59,8 @@
             // 
             // btnInsert
             // 
-            btnInsert.BackColor = Color.FromArgb(47, 82, 189);
+            btnInsert.BackColor = Color.FromArgb(68, 187, 164);
+            btnInsert.FlatStyle = FlatStyle.Popup;
             btnInsert.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.ForeColor = Color.White;
             btnInsert.Location = new Point(39, 213);
@@ -71,7 +73,8 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = Color.FromArgb(47, 82, 189);
+            btnUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnUpdate.FlatStyle = FlatStyle.Popup;
             btnUpdate.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(39, 287);
@@ -84,7 +87,8 @@
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.FromArgb(47, 82, 189);
+            btnDelete.BackColor = Color.FromArgb(68, 187, 164);
+            btnDelete.FlatStyle = FlatStyle.Popup;
             btnDelete.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = Color.White;
             btnDelete.Location = new Point(39, 364);
@@ -98,13 +102,13 @@
             // lblWelcome
             // 
             lblWelcome.AutoSize = true;
-            lblWelcome.Font = new Font("Poppins SemiBold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblWelcome.Font = new Font("Poppins", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblWelcome.ForeColor = Color.White;
             lblWelcome.Location = new Point(32, 36);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(157, 50);
+            lblWelcome.Size = new Size(169, 50);
             lblWelcome.TabIndex = 1;
-            lblWelcome.Text = "Welcome";
+            lblWelcome.Text = "Welcome!";
             // 
             // lblChoose
             // 
@@ -132,11 +136,12 @@
             // btnBack
             // 
             btnBack.BackColor = Color.Maroon;
-            btnBack.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.FlatStyle = FlatStyle.Flat;
+            btnBack.Font = new Font("Poppins Medium", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(703, 12);
+            btnBack.Location = new Point(703, 14);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(85, 47);
+            btnBack.Size = new Size(85, 36);
             btnBack.TabIndex = 23;
             btnBack.Text = "Exit";
             btnBack.UseVisualStyleBackColor = false;
@@ -144,51 +149,60 @@
             // 
             // linkLinkedIn
             // 
-            linkLinkedIn.ActiveLinkColor = Color.MediumBlue;
+            linkLinkedIn.ActiveLinkColor = Color.FromArgb(85, 134, 140);
             linkLinkedIn.AutoSize = true;
-            linkLinkedIn.LinkColor = Color.DodgerBlue;
-            linkLinkedIn.Location = new Point(724, 421);
+            linkLinkedIn.BackColor = Color.FromArgb(68, 187, 164);
+            linkLinkedIn.Font = new Font("Poppins Medium", 7.8F, FontStyle.Bold);
+            linkLinkedIn.LinkColor = Color.FromArgb(21, 49, 49);
+            linkLinkedIn.Location = new Point(677, 418);
             linkLinkedIn.Name = "linkLinkedIn";
-            linkLinkedIn.Size = new Size(64, 20);
+            linkLinkedIn.Size = new Size(70, 23);
             linkLinkedIn.TabIndex = 24;
             linkLinkedIn.TabStop = true;
             linkLinkedIn.Text = "LinkedIn";
-            linkLinkedIn.VisitedLinkColor = Color.Violet;
+            linkLinkedIn.TextAlign = ContentAlignment.MiddleCenter;
+            linkLinkedIn.VisitedLinkColor = Color.Purple;
             linkLinkedIn.LinkClicked += linkLinkedIn_LinkClicked;
             // 
             // linkGitHub
             // 
-            linkGitHub.ActiveLinkColor = Color.MediumBlue;
+            linkGitHub.ActiveLinkColor = Color.FromArgb(85, 134, 140);
             linkGitHub.AutoSize = true;
-            linkGitHub.LinkColor = Color.DodgerBlue;
-            linkGitHub.Location = new Point(650, 421);
+            linkGitHub.BackColor = Color.FromArgb(68, 187, 164);
+            linkGitHub.Font = new Font("Poppins Medium", 7.8F, FontStyle.Bold);
+            linkGitHub.LinkColor = Color.FromArgb(21, 49, 49);
+            linkGitHub.Location = new Point(611, 418);
             linkGitHub.Name = "linkGitHub";
-            linkGitHub.Size = new Size(56, 20);
+            linkGitHub.Size = new Size(60, 23);
             linkGitHub.TabIndex = 24;
             linkGitHub.TabStop = true;
             linkGitHub.Text = "GitHub";
-            linkGitHub.VisitedLinkColor = Color.Violet;
+            linkGitHub.TextAlign = ContentAlignment.MiddleCenter;
+            linkGitHub.VisitedLinkColor = Color.Purple;
             linkGitHub.LinkClicked += linkGitHub_LinkClicked;
             // 
             // linkBehance
             // 
-            linkBehance.ActiveLinkColor = Color.MediumBlue;
+            linkBehance.ActiveLinkColor = Color.FromArgb(85, 134, 140);
             linkBehance.AutoSize = true;
-            linkBehance.LinkColor = Color.DodgerBlue;
-            linkBehance.Location = new Point(568, 421);
+            linkBehance.BackColor = Color.FromArgb(68, 187, 164);
+            linkBehance.Font = new Font("Poppins Medium", 7.8F, FontStyle.Bold);
+            linkBehance.LinkColor = Color.FromArgb(21, 49, 49);
+            linkBehance.Location = new Point(531, 418);
             linkBehance.Name = "linkBehance";
-            linkBehance.Size = new Size(65, 20);
+            linkBehance.Size = new Size(74, 23);
             linkBehance.TabIndex = 24;
             linkBehance.TabStop = true;
             linkBehance.Text = "Behance";
-            linkBehance.VisitedLinkColor = Color.Violet;
+            linkBehance.TextAlign = ContentAlignment.MiddleCenter;
+            linkBehance.VisitedLinkColor = Color.Purple;
             linkBehance.LinkClicked += linkBehance_LinkClicked;
             // 
             // frmParent
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(28, 35, 47);
+            BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
             Controls.Add(linkBehance);
             Controls.Add(linkGitHub);

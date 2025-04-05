@@ -44,7 +44,6 @@
             comboAll = new ComboBox();
             label5 = new Label();
             dgvAll = new DataGridView();
-            separator = new GroupBox();
             label6 = new Label();
             label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
@@ -96,7 +95,8 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(46, 64, 116);
+            btnBack.BackColor = Color.FromArgb(85, 134, 140);
+            btnBack.FlatStyle = FlatStyle.Popup;
             btnBack.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
             btnBack.Location = new Point(617, 367);
@@ -109,7 +109,8 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = Color.FromArgb(47, 82, 189);
+            btnUpdate.BackColor = Color.FromArgb(68, 187, 164);
+            btnUpdate.FlatStyle = FlatStyle.Popup;
             btnUpdate.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(436, 367);
@@ -124,8 +125,8 @@
             // 
             lblRowsMsg.AutoSize = true;
             lblRowsMsg.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRowsMsg.ForeColor = Color.DodgerBlue;
-            lblRowsMsg.Location = new Point(436, 337);
+            lblRowsMsg.ForeColor = Color.FromArgb(68, 187, 164);
+            lblRowsMsg.Location = new Point(436, 330);
             lblRowsMsg.Name = "lblRowsMsg";
             lblRowsMsg.Size = new Size(104, 23);
             lblRowsMsg.TabIndex = 17;
@@ -185,7 +186,7 @@
             // comboAll
             // 
             comboAll.FormattingEnabled = true;
-            comboAll.Location = new Point(441, 298);
+            comboAll.Location = new Point(441, 288);
             comboAll.Name = "comboAll";
             comboAll.Size = new Size(331, 28);
             comboAll.TabIndex = 26;
@@ -196,7 +197,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(436, 269);
+            label5.Location = new Point(436, 259);
             label5.Name = "label5";
             label5.Size = new Size(151, 26);
             label5.TabIndex = 25;
@@ -212,14 +213,6 @@
             dgvAll.RowHeadersWidth = 51;
             dgvAll.Size = new Size(800, 189);
             dgvAll.TabIndex = 27;
-            // 
-            // separator
-            // 
-            separator.Location = new Point(442, 250);
-            separator.Name = "separator";
-            separator.Size = new Size(330, 2);
-            separator.TabIndex = 28;
-            separator.TabStop = false;
             // 
             // label6
             // 
@@ -247,11 +240,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(28, 35, 47);
+            BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(separator);
             Controls.Add(dgvAll);
             Controls.Add(comboAll);
             Controls.Add(label4);
@@ -294,7 +286,6 @@
         private ComboBox comboAll;
         private Label label5;
         private DataGridView dgvAll;
-        private GroupBox separator;
         private Label label6;
         private Label label7;
     }

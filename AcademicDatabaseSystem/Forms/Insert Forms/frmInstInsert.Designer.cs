@@ -50,7 +50,8 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(46, 64, 116);
+            btnBack.BackColor = Color.FromArgb(85, 134, 140);
+            btnBack.FlatStyle = FlatStyle.Popup;
             btnBack.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
             btnBack.Location = new Point(619, 362);
@@ -63,7 +64,8 @@
             // 
             // btnInsert
             // 
-            btnInsert.BackColor = Color.FromArgb(47, 82, 189);
+            btnInsert.BackColor = Color.FromArgb(68, 187, 164);
+            btnInsert.FlatStyle = FlatStyle.Popup;
             btnInsert.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.ForeColor = Color.White;
             btnInsert.Location = new Point(438, 362);
@@ -78,7 +80,7 @@
             // 
             lblRowsMsg.AutoSize = true;
             lblRowsMsg.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRowsMsg.ForeColor = Color.DodgerBlue;
+            lblRowsMsg.ForeColor = Color.FromArgb(68, 187, 164);
             lblRowsMsg.Location = new Point(438, 306);
             lblRowsMsg.Name = "lblRowsMsg";
             lblRowsMsg.Size = new Size(176, 23);
@@ -235,7 +237,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(28, 35, 47);
+            BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
             Controls.Add(label4);
             Controls.Add(label2);

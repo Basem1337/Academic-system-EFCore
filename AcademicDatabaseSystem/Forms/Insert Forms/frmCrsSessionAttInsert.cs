@@ -42,7 +42,7 @@ namespace WinFormsApp
 
             db.CrsSessionAtts.Add(newRecord);
             db.SaveChanges();
-            lblRowsMsg.ForeColor = Color.DodgerBlue;
+            lblRowsMsg.ForeColor = Color.FromArgb(68, 187, 164);
             lblRowsMsg.Text = "1 Row Added Successfully";
             lblRowsMsg.Show();
         }

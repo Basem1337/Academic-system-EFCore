@@ -64,7 +64,8 @@
             // 
             // btnSelectAll
             // 
-            btnSelectAll.BackColor = Color.FromArgb(47, 82, 189);
+            btnSelectAll.BackColor = Color.FromArgb(68, 187, 164);
+            btnSelectAll.FlatStyle = FlatStyle.Popup;
             btnSelectAll.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSelectAll.ForeColor = Color.White;
             btnSelectAll.Location = new Point(37, 162);
@@ -77,7 +78,8 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.FromArgb(46, 64, 116);
+            btnBack.BackColor = Color.FromArgb(85, 134, 140);
+            btnBack.FlatStyle = FlatStyle.Popup;
             btnBack.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBack.ForeColor = Color.White;
             btnBack.Location = new Point(590, 162);
@@ -129,7 +131,8 @@
             // 
             // btnSelect
             // 
-            btnSelect.BackColor = Color.FromArgb(47, 82, 189);
+            btnSelect.BackColor = Color.FromArgb(68, 187, 164);
+            btnSelect.FlatStyle = FlatStyle.Popup;
             btnSelect.Font = new Font("Poppins Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSelect.ForeColor = Color.White;
             btnSelect.Location = new Point(218, 162);
@@ -144,7 +147,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(28, 35, 47);
+            BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
             Controls.Add(dgvStd);
             Controls.Add(comboRecord);
