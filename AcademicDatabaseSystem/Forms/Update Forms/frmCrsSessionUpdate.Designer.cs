@@ -50,6 +50,9 @@
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
+            lblCrsID = new Label();
+            lblInsID = new Label();
+            lblDate = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -279,12 +282,48 @@
             label9.TabIndex = 39;
             label9.Text = "*";
             // 
+            // lblCrsID
+            // 
+            lblCrsID.AutoSize = true;
+            lblCrsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCrsID.ForeColor = Color.IndianRed;
+            lblCrsID.Location = new Point(41, 333);
+            lblCrsID.Name = "lblCrsID";
+            lblCrsID.Size = new Size(198, 23);
+            lblCrsID.TabIndex = 47;
+            lblCrsID.Text = "Course ID must be a number";
+            // 
+            // lblInsID
+            // 
+            lblInsID.AutoSize = true;
+            lblInsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInsID.ForeColor = Color.IndianRed;
+            lblInsID.Location = new Point(41, 251);
+            lblInsID.Name = "lblInsID";
+            lblInsID.Size = new Size(214, 23);
+            lblInsID.TabIndex = 48;
+            lblInsID.Text = "Instructor ID must be a number";
+            // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.ForeColor = Color.IndianRed;
+            lblDate.Location = new Point(442, 176);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(287, 23);
+            lblDate.TabIndex = 49;
+            lblDate.Text = "Date must be like this format mm/dd/yyyy";
+            // 
             // frmCrsSessionUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
+            Controls.Add(lblCrsID);
+            Controls.Add(lblInsID);
+            Controls.Add(lblDate);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -339,5 +378,8 @@
         private Label label7;
         private Label label8;
         private Label label9;
+        private Label lblCrsID;
+        private Label lblInsID;
+        private Label lblDate;
     }
 }

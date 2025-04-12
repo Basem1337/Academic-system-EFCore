@@ -44,6 +44,9 @@
             label3 = new Label();
             label1 = new Label();
             label2 = new Label();
+            lblDate = new Label();
+            lblInsID = new Label();
+            lblCrsID = new Label();
             SuspendLayout();
             // 
             // btnBack
@@ -212,12 +215,48 @@
             label2.TabIndex = 37;
             label2.Text = "*";
             // 
+            // lblDate
+            // 
+            lblDate.AutoSize = true;
+            lblDate.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDate.ForeColor = Color.IndianRed;
+            lblDate.Location = new Point(56, 408);
+            lblDate.Name = "lblDate";
+            lblDate.Size = new Size(287, 23);
+            lblDate.TabIndex = 46;
+            lblDate.Text = "Date must be like this format mm/dd/yyyy";
+            // 
+            // lblInsID
+            // 
+            lblInsID.AutoSize = true;
+            lblInsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInsID.ForeColor = Color.IndianRed;
+            lblInsID.Location = new Point(56, 246);
+            lblInsID.Name = "lblInsID";
+            lblInsID.Size = new Size(214, 23);
+            lblInsID.TabIndex = 46;
+            lblInsID.Text = "Instructor ID must be a number";
+            // 
+            // lblCrsID
+            // 
+            lblCrsID.AutoSize = true;
+            lblCrsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCrsID.ForeColor = Color.IndianRed;
+            lblCrsID.Location = new Point(56, 171);
+            lblCrsID.Name = "lblCrsID";
+            lblCrsID.Size = new Size(198, 23);
+            lblCrsID.TabIndex = 46;
+            lblCrsID.Text = "Course ID must be a number";
+            // 
             // frmCrsSessionInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(lblCrsID);
+            Controls.Add(lblInsID);
+            Controls.Add(lblDate);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label3);
@@ -257,5 +296,8 @@
         private Label label3;
         private Label label1;
         private Label label2;
+        private Label lblDate;
+        private Label lblInsID;
+        private Label lblCrsID;
     }
 }

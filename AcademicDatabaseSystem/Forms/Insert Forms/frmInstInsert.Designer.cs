@@ -46,6 +46,11 @@
             label3 = new Label();
             label2 = new Label();
             label4 = new Label();
+            lblSalary = new Label();
+            lblPhone = new Label();
+            lblLname = new Label();
+            lblFname = new Label();
+            lblDeptID = new Label();
             SuspendLayout();
             // 
             // btnBack
@@ -233,12 +238,72 @@
             label4.TabIndex = 37;
             label4.Text = "*";
             // 
+            // lblSalary
+            // 
+            lblSalary.AutoSize = true;
+            lblSalary.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSalary.ForeColor = Color.IndianRed;
+            lblSalary.Location = new Point(56, 330);
+            lblSalary.Name = "lblSalary";
+            lblSalary.Size = new Size(186, 23);
+            lblSalary.TabIndex = 42;
+            lblSalary.Text = "Salary must a number only";
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhone.ForeColor = Color.IndianRed;
+            lblPhone.Location = new Point(56, 412);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(255, 23);
+            lblPhone.TabIndex = 43;
+            lblPhone.Text = "Phone must be 11 numbers (Egyptian)";
+            // 
+            // lblLname
+            // 
+            lblLname.AutoSize = true;
+            lblLname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLname.ForeColor = Color.IndianRed;
+            lblLname.Location = new Point(56, 247);
+            lblLname.Name = "lblLname";
+            lblLname.Size = new Size(216, 23);
+            lblLname.TabIndex = 44;
+            lblLname.Text = "Name must be characters only.";
+            // 
+            // lblFname
+            // 
+            lblFname.AutoSize = true;
+            lblFname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFname.ForeColor = Color.IndianRed;
+            lblFname.Location = new Point(56, 171);
+            lblFname.Name = "lblFname";
+            lblFname.Size = new Size(216, 23);
+            lblFname.TabIndex = 45;
+            lblFname.Text = "Name must be characters only.";
+            // 
+            // lblDeptID
+            // 
+            lblDeptID.AutoSize = true;
+            lblDeptID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDeptID.ForeColor = Color.IndianRed;
+            lblDeptID.Location = new Point(438, 175);
+            lblDeptID.Name = "lblDeptID";
+            lblDeptID.Size = new Size(240, 23);
+            lblDeptID.TabIndex = 46;
+            lblDeptID.Text = "Department ID must a number only";
+            // 
             // frmInstInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(lblDeptID);
+            Controls.Add(lblSalary);
+            Controls.Add(lblPhone);
+            Controls.Add(lblLname);
+            Controls.Add(lblFname);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label3);
@@ -282,5 +347,10 @@
         private Label label3;
         private Label label2;
         private Label label4;
+        private Label lblSalary;
+        private Label lblPhone;
+        private Label lblLname;
+        private Label lblFname;
+        private Label lblDeptID;
     }
 }

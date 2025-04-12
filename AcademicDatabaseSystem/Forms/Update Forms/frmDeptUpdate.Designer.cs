@@ -46,6 +46,8 @@
             dgvAll = new DataGridView();
             label6 = new Label();
             label7 = new Label();
+            lblMng = new Label();
+            lblDeptName = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -236,12 +238,36 @@
             label7.TabIndex = 38;
             label7.Text = "*";
             // 
+            // lblMng
+            // 
+            lblMng.AutoSize = true;
+            lblMng.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMng.ForeColor = Color.IndianRed;
+            lblMng.Location = new Point(41, 414);
+            lblMng.Name = "lblMng";
+            lblMng.Size = new Size(241, 23);
+            lblMng.TabIndex = 42;
+            lblMng.Text = "Manager ID must be a number only";
+            // 
+            // lblDeptName
+            // 
+            lblDeptName.AutoSize = true;
+            lblDeptName.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDeptName.ForeColor = Color.IndianRed;
+            lblDeptName.Location = new Point(41, 251);
+            lblDeptName.Name = "lblDeptName";
+            lblDeptName.Size = new Size(299, 23);
+            lblDeptName.TabIndex = 44;
+            lblDeptName.Text = "Department Name must be characters only.";
+            // 
             // frmDeptUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
+            Controls.Add(lblMng);
+            Controls.Add(lblDeptName);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(dgvAll);
@@ -288,5 +314,7 @@
         private DataGridView dgvAll;
         private Label label6;
         private Label label7;
+        private Label lblMng;
+        private Label lblDeptName;
     }
 }

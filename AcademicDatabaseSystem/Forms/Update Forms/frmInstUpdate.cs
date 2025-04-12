@@ -1,4 +1,5 @@
 ﻿using AcademicDatabaseSystem.Context;
+using AcademicDatabaseSystem.DataRepository;
 using AcademicDatabaseSystem.Forms;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,7 +12,14 @@ namespace WinFormsApp
         {
             InitializeComponent();
             FillComboBox();
+            comboDept.Hide();
+            FillDeptComboBox();
             lblRowsMsg.Hide();
+            lblFname.Hide();
+            lblLname.Hide();
+            lblPhone.Hide();
+            lblSalary.Hide();
+            lblDeptID.Hide();
         }
 
         private void FillComboBox()
@@ -24,6 +32,21 @@ namespace WinFormsApp
             comboAll.DisplayMember = "FullName";
             comboAll.ValueMember = "InsID";
         }
+
+        private void FillDeptComboBox()
+        {
+            db.Instructors.Include(i => i.Department).Load();
+
+            comboDept.DataSource = db.Instructors.Local
+                .Select(i => i.Department)
+                .Distinct()
+                .Select(d => new { DeptName = d.Dept_Name, d.Dept_ID })
+                .ToList();
+
+            comboDept.DisplayMember = "DeptName";
+            comboDept.ValueMember = "Dept_ID";
+        }
+
 
         private void comboStd_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -56,12 +79,17 @@ namespace WinFormsApp
             .Select(ent => ent.Salary)
             .FirstOrDefault()
             .ToString();
-            
+
             txtDeptID.Text = db.Instructors.Local
             .Where(ent => ent.InsID == Convert.ToInt32(comboAll.SelectedValue))
             .Select(ent => ent.Dept_ID)
             .FirstOrDefault()
             .ToString();
+
+            comboDept.SelectedValue = db.Instructors.Local
+            .Where(ent => ent.InsID == Convert.ToInt32(comboAll.SelectedValue))
+            .Select(ent => ent.Dept_ID)
+            .FirstOrDefault();
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
@@ -80,10 +108,52 @@ namespace WinFormsApp
             bool op3 = toUpdate.Phone == txtPhone.Text;
             bool op4 = toUpdate.Salary.ToString() == txtSalary.Text;
             bool op5 = toUpdate.Dept_ID.ToString() == txtDeptID.Text;
+            bool op6 = toUpdate.Dept_ID.ToString() == comboDept.ValueMember;
 
             lblRowsMsg.Hide();
+            lblFname.Hide();
+            lblLname.Hide();
+            lblPhone.Hide();
+            lblSalary.Hide();
+            //lblDeptID.Hide();
 
-            if (string.IsNullOrWhiteSpace(txtFName.Text) || string.IsNullOrWhiteSpace(txtLName.Text) || string.IsNullOrWhiteSpace(txtDeptID.Text))
+            if (!Validations.CheckName(txtFName.Text))
+            {
+                lblFname.Show();
+                return;
+            }
+
+
+            if (!Validations.CheckName(txtLName.Text))
+            {
+                lblLname.Show();
+                return;
+            }
+
+
+            if (!Validations.CheckPhone(txtPhone.Text))
+            {
+                lblPhone.Show();
+                return;
+            }
+
+
+            if (!Validations.CheckSalary(txtSalary.Text))
+            {
+                lblSalary.Show();
+                return;
+            }
+
+            if (!Validations.CheckNumber(txtDeptID.Text))
+            {
+                lblDeptID.Show();
+                return;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(txtFName.Text) || string.IsNullOrWhiteSpace(txtLName.Text)
+                || string.IsNullOrWhiteSpace(txtDeptID.Text)
+                )
             {
                 lblRowsMsg.ForeColor = Color.Red;
                 lblRowsMsg.Text = "There are fields that cannot be empty..";
@@ -98,6 +168,7 @@ namespace WinFormsApp
                 toUpdate.Phone = txtPhone.Text;
                 toUpdate.Salary = Convert.ToDecimal(txtSalary.Text);
                 toUpdate.Dept_ID = Convert.ToInt32(txtDeptID.Text);
+                //toUpdate.Dept_ID = Convert.ToInt32(comboDept.ValueMember);
 
                 dgvAll.EndEdit();
                 db.SaveChanges();

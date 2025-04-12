@@ -1,4 +1,5 @@
 ﻿using AcademicDatabaseSystem.Context;
+using AcademicDatabaseSystem.DataRepository;
 using AcademicDatabaseSystem.Forms;
 using Microsoft.EntityFrameworkCore;
 
@@ -75,6 +76,29 @@ namespace WinFormsApp
             bool op4 = toUpdate.Date.ToString() == txtDate.Text;
 
             lblRowsMsg.Hide();
+
+            lblInsID.Hide();
+            lblCrsID.Hide();
+            lblDate.Hide();
+
+            if (!Validations.CheckName(txtCrsID.Text))
+            {
+                lblCrsID.Show();
+                return;
+            }
+
+
+            if (!Validations.CheckNumber(txtInstID.Text))
+            {
+                lblInsID.Show();
+                return;
+            }
+
+            if (!Validations.CheckNumber(txtDate.Text))
+            {
+                lblDate.Show();
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(txtInstID.Text) || string.IsNullOrWhiteSpace(txtCrsID.Text) || string.IsNullOrWhiteSpace(txtDate.Text))
             {

@@ -41,6 +41,8 @@
             txtDeptName = new TextBox();
             label3 = new Label();
             label1 = new Label();
+            lblMng = new Label();
+            lblDeptName = new Label();
             SuspendLayout();
             // 
             // btnBack
@@ -180,12 +182,36 @@
             label1.TabIndex = 37;
             label1.Text = "*";
             // 
+            // lblMng
+            // 
+            lblMng.AutoSize = true;
+            lblMng.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMng.ForeColor = Color.IndianRed;
+            lblMng.Location = new Point(56, 337);
+            lblMng.Name = "lblMng";
+            lblMng.Size = new Size(241, 23);
+            lblMng.TabIndex = 45;
+            lblMng.Text = "Manager ID must be a number only";
+            // 
+            // lblDeptName
+            // 
+            lblDeptName.AutoSize = true;
+            lblDeptName.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDeptName.ForeColor = Color.IndianRed;
+            lblDeptName.Location = new Point(56, 174);
+            lblDeptName.Name = "lblDeptName";
+            lblDeptName.Size = new Size(299, 23);
+            lblDeptName.TabIndex = 46;
+            lblDeptName.Text = "Department Name must be characters only.";
+            // 
             // frmDeptInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(lblMng);
+            Controls.Add(lblDeptName);
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(label5);
@@ -219,5 +245,7 @@
         private TextBox txtDeptName;
         private Label label3;
         private Label label1;
+        private Label lblMng;
+        private Label lblDeptName;
     }
 }

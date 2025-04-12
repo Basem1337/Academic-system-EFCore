@@ -46,6 +46,9 @@
             dgvAll = new DataGridView();
             label6 = new Label();
             label7 = new Label();
+            lblFname = new Label();
+            lblLname = new Label();
+            lblPhone = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -219,7 +222,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.IndianRed;
-            label6.Location = new Point(123, 190);
+            label6.Location = new Point(123, 189);
             label6.Name = "label6";
             label6.Size = new Size(25, 36);
             label6.TabIndex = 37;
@@ -230,11 +233,44 @@
             label7.AutoSize = true;
             label7.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.IndianRed;
-            label7.Location = new Point(123, 272);
+            label7.Location = new Point(123, 271);
             label7.Name = "label7";
             label7.Size = new Size(25, 36);
             label7.TabIndex = 37;
             label7.Text = "*";
+            // 
+            // lblFname
+            // 
+            lblFname.AutoSize = true;
+            lblFname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFname.ForeColor = Color.IndianRed;
+            lblFname.Location = new Point(41, 252);
+            lblFname.Name = "lblFname";
+            lblFname.Size = new Size(216, 23);
+            lblFname.TabIndex = 37;
+            lblFname.Text = "Name must be characters only.";
+            // 
+            // lblLname
+            // 
+            lblLname.AutoSize = true;
+            lblLname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLname.ForeColor = Color.IndianRed;
+            lblLname.Location = new Point(41, 334);
+            lblLname.Name = "lblLname";
+            lblLname.Size = new Size(216, 23);
+            lblLname.TabIndex = 37;
+            lblLname.Text = "Name must be characters only.";
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhone.ForeColor = Color.IndianRed;
+            lblPhone.Location = new Point(41, 414);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(255, 23);
+            lblPhone.TabIndex = 37;
+            lblPhone.Text = "Phone must be 11 numbers (Egyptian)";
             // 
             // frmStdUpdate
             // 
@@ -243,6 +279,9 @@
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
             Controls.Add(label7);
+            Controls.Add(lblPhone);
+            Controls.Add(lblLname);
+            Controls.Add(lblFname);
             Controls.Add(label6);
             Controls.Add(dgvAll);
             Controls.Add(comboAll);
@@ -287,5 +326,8 @@
         private DataGridView dgvAll;
         private Label label6;
         private Label label7;
+        private Label lblFname;
+        private Label lblLname;
+        private Label lblPhone;
     }
 }

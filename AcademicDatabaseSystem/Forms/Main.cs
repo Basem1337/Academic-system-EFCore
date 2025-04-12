@@ -47,7 +47,7 @@ namespace WinFormsApp
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
-                FileName = "https://www.linkedin.com/in/basem-mo1337/",
+                FileName = "https://www.linkedin.com/in/baramadan/",
                 UseShellExecute = true
             });
 
@@ -69,7 +69,7 @@ namespace WinFormsApp
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
             {
-                FileName = "https://www.behance.net/basem1337",
+                FileName = "https://www.behance.net/baramadan",
                 UseShellExecute = true
             });
 

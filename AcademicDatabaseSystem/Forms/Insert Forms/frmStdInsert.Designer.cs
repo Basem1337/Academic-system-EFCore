@@ -41,6 +41,9 @@
             txtFName = new TextBox();
             label3 = new Label();
             label1 = new Label();
+            lblPhone = new Label();
+            lblLname = new Label();
+            lblFname = new Label();
             SuspendLayout();
             // 
             // btnBack
@@ -180,12 +183,48 @@
             label1.TabIndex = 37;
             label1.Text = "*";
             // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhone.ForeColor = Color.IndianRed;
+            lblPhone.Location = new Point(57, 337);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(255, 23);
+            lblPhone.TabIndex = 38;
+            lblPhone.Text = "Phone must be 11 numbers (Egyptian)";
+            // 
+            // lblLname
+            // 
+            lblLname.AutoSize = true;
+            lblLname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLname.ForeColor = Color.IndianRed;
+            lblLname.Location = new Point(57, 257);
+            lblLname.Name = "lblLname";
+            lblLname.Size = new Size(216, 23);
+            lblLname.TabIndex = 39;
+            lblLname.Text = "Name must be characters only.";
+            // 
+            // lblFname
+            // 
+            lblFname.AutoSize = true;
+            lblFname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFname.ForeColor = Color.IndianRed;
+            lblFname.Location = new Point(57, 174);
+            lblFname.Name = "lblFname";
+            lblFname.Size = new Size(216, 23);
+            lblFname.TabIndex = 40;
+            lblFname.Text = "Name must be characters only.";
+            // 
             // frmStdInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(lblPhone);
+            Controls.Add(lblLname);
+            Controls.Add(lblFname);
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(label5);
@@ -220,5 +259,8 @@
         private TextBox txtFName;
         private Label label3;
         private Label label1;
+        private Label lblPhone;
+        private Label lblLname;
+        private Label lblFname;
     }
 }

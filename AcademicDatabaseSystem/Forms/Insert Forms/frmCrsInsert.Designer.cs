@@ -45,6 +45,10 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            lblInsID = new Label();
+            lblDeptID = new Label();
+            lblDur = new Label();
+            lblCrsName = new Label();
             SuspendLayout();
             // 
             // btnBack
@@ -224,12 +228,60 @@
             label4.TabIndex = 8;
             label4.Text = "*";
             // 
+            // lblInsID
+            // 
+            lblInsID.AutoSize = true;
+            lblInsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInsID.ForeColor = Color.IndianRed;
+            lblInsID.Location = new Point(56, 408);
+            lblInsID.Name = "lblInsID";
+            lblInsID.Size = new Size(231, 23);
+            lblInsID.TabIndex = 46;
+            lblInsID.Text = "Instructor ID must be number only";
+            // 
+            // lblDeptID
+            // 
+            lblDeptID.AutoSize = true;
+            lblDeptID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDeptID.ForeColor = Color.IndianRed;
+            lblDeptID.Location = new Point(56, 328);
+            lblDeptID.Name = "lblDeptID";
+            lblDeptID.Size = new Size(248, 23);
+            lblDeptID.TabIndex = 47;
+            lblDeptID.Text = "Department ID must be number only";
+            // 
+            // lblDur
+            // 
+            lblDur.AutoSize = true;
+            lblDur.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDur.ForeColor = Color.IndianRed;
+            lblDur.Location = new Point(56, 246);
+            lblDur.Name = "lblDur";
+            lblDur.Size = new Size(208, 23);
+            lblDur.TabIndex = 48;
+            lblDur.Text = "Duration must be number only";
+            // 
+            // lblCrsName
+            // 
+            lblCrsName.AutoSize = true;
+            lblCrsName.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCrsName.ForeColor = Color.IndianRed;
+            lblCrsName.Location = new Point(56, 171);
+            lblCrsName.Name = "lblCrsName";
+            lblCrsName.Size = new Size(229, 23);
+            lblCrsName.TabIndex = 49;
+            lblCrsName.Text = "Course must be charaacters only";
+            // 
             // frmCrsInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(lblInsID);
+            Controls.Add(lblDeptID);
+            Controls.Add(lblDur);
+            Controls.Add(lblCrsName);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label7);
@@ -271,5 +323,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Label lblInsID;
+        private Label lblDeptID;
+        private Label lblDur;
+        private Label lblCrsName;
     }
 }

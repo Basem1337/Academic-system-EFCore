@@ -52,6 +52,12 @@
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
+            lblPhone = new Label();
+            lblLname = new Label();
+            lblFname = new Label();
+            lblSalary = new Label();
+            comboDept = new ComboBox();
+            lblDeptID = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -248,7 +254,7 @@
             // 
             // txtDeptID
             // 
-            txtDeptID.Location = new Point(441, 217);
+            txtDeptID.Location = new Point(441, 224);
             txtDeptID.Name = "txtDeptID";
             txtDeptID.Size = new Size(274, 27);
             txtDeptID.TabIndex = 13;
@@ -258,7 +264,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(436, 188);
+            label7.Location = new Point(436, 195);
             label7.Name = "label7";
             label7.Size = new Size(121, 26);
             label7.TabIndex = 22;
@@ -269,7 +275,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.IndianRed;
-            label8.Location = new Point(124, 190);
+            label8.Location = new Point(124, 189);
             label8.Name = "label8";
             label8.Size = new Size(25, 36);
             label8.TabIndex = 37;
@@ -280,7 +286,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.IndianRed;
-            label9.Location = new Point(124, 272);
+            label9.Location = new Point(124, 271);
             label9.Name = "label9";
             label9.Size = new Size(25, 36);
             label9.TabIndex = 37;
@@ -291,11 +297,74 @@
             label10.AutoSize = true;
             label10.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.IndianRed;
-            label10.Location = new Point(552, 182);
+            label10.Location = new Point(552, 188);
             label10.Name = "label10";
             label10.Size = new Size(25, 36);
             label10.TabIndex = 38;
             label10.Text = "*";
+            // 
+            // lblPhone
+            // 
+            lblPhone.AutoSize = true;
+            lblPhone.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhone.ForeColor = Color.IndianRed;
+            lblPhone.Location = new Point(41, 414);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(255, 23);
+            lblPhone.TabIndex = 39;
+            lblPhone.Text = "Phone must be 11 numbers (Egyptian)";
+            // 
+            // lblLname
+            // 
+            lblLname.AutoSize = true;
+            lblLname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLname.ForeColor = Color.IndianRed;
+            lblLname.Location = new Point(41, 334);
+            lblLname.Name = "lblLname";
+            lblLname.Size = new Size(216, 23);
+            lblLname.TabIndex = 40;
+            lblLname.Text = "Name must be characters only.";
+            // 
+            // lblFname
+            // 
+            lblFname.AutoSize = true;
+            lblFname.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFname.ForeColor = Color.IndianRed;
+            lblFname.Location = new Point(41, 251);
+            lblFname.Name = "lblFname";
+            lblFname.Size = new Size(216, 23);
+            lblFname.TabIndex = 41;
+            lblFname.Text = "Name must be characters only.";
+            // 
+            // lblSalary
+            // 
+            lblSalary.AutoSize = true;
+            lblSalary.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSalary.ForeColor = Color.IndianRed;
+            lblSalary.Location = new Point(445, 177);
+            lblSalary.Name = "lblSalary";
+            lblSalary.Size = new Size(186, 23);
+            lblSalary.TabIndex = 39;
+            lblSalary.Text = "Salary must a number only";
+            // 
+            // comboDept
+            // 
+            comboDept.FormattingEnabled = true;
+            comboDept.Location = new Point(440, 68);
+            comboDept.Name = "comboDept";
+            comboDept.Size = new Size(275, 28);
+            comboDept.TabIndex = 26;
+            // 
+            // lblDeptID
+            // 
+            lblDeptID.AutoSize = true;
+            lblDeptID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDeptID.ForeColor = Color.IndianRed;
+            lblDeptID.Location = new Point(441, 251);
+            lblDeptID.Name = "lblDeptID";
+            lblDeptID.Size = new Size(240, 23);
+            lblDeptID.TabIndex = 39;
+            lblDeptID.Text = "Department ID must a number only";
             // 
             // frmInstUpdate
             // 
@@ -303,11 +372,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
+            Controls.Add(lblDeptID);
+            Controls.Add(lblSalary);
+            Controls.Add(lblPhone);
+            Controls.Add(lblLname);
+            Controls.Add(lblFname);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(separator);
             Controls.Add(dgvAll);
+            Controls.Add(comboDept);
             Controls.Add(comboAll);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -361,5 +436,11 @@
         private Label label8;
         private Label label9;
         private Label label10;
+        private Label lblPhone;
+        private Label lblLname;
+        private Label lblFname;
+        private Label lblSalary;
+        private ComboBox comboDept;
+        private Label lblDeptID;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AcademicDatabaseSystem.Context;
+using AcademicDatabaseSystem.DataRepository;
 using AcademicDatabaseSystem.Forms;
 using AcademicDatabaseSystem.Models;
 
@@ -11,6 +12,9 @@ namespace WinFormsApp
         {
             InitializeComponent();
             lblRowsMsg.Hide();
+            lblInsID.Hide();
+            lblCrsID.Hide();
+            lblDate.Hide();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -23,6 +27,28 @@ namespace WinFormsApp
         private void btnInsert_Click(object sender, EventArgs e)
         {
             lblRowsMsg.Hide();
+
+            lblInsID.Hide();
+            lblCrsID.Hide();
+            lblDate.Hide();
+
+            if (!Validations.CheckName(txtInsID.Text) && !string.IsNullOrWhiteSpace(txtInsID.Text))
+            {
+                lblInsID.Show();
+                return;
+            }
+
+            if (!Validations.CheckName(txtCrsID.Text) && !string.IsNullOrWhiteSpace(txtCrsID.Text))
+            {
+                lblCrsID.Show();
+                return;
+            }
+
+            if (!Validations.CheckNumber(txtDate.Text) && !string.IsNullOrWhiteSpace(txtDate.Text))
+            {
+                lblDate.Show();
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(txtInsID.Text) || string.IsNullOrWhiteSpace(txtCrsID.Text) || string.IsNullOrWhiteSpace(txtDate.Text))
             {

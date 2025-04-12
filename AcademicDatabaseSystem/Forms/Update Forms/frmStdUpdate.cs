@@ -1,4 +1,5 @@
 ﻿using AcademicDatabaseSystem.Context;
+using AcademicDatabaseSystem.DataRepository;
 using AcademicDatabaseSystem.Forms;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -13,6 +14,9 @@ namespace WinFormsApp
             InitializeComponent();
             FillComboBox();
             lblRowsMsg.Hide();
+            lblFname.Hide();
+            lblLname.Hide();
+            lblPhone.Hide();
         }
 
         private void FillComboBox()
@@ -70,6 +74,30 @@ namespace WinFormsApp
 
 
             lblRowsMsg.Hide();
+            lblFname.Hide();
+            lblLname.Hide();
+            lblPhone.Hide();
+
+            if (!Validations.CheckName(txtFName.Text))
+            {
+                lblFname.Show();
+                return;
+            }
+
+
+            if (!Validations.CheckName(txtLName.Text))
+            {
+                lblLname.Show();
+                return;
+            }
+
+
+            if (!Validations.CheckPhone(txtPhone.Text))
+            {
+                lblPhone.Show();
+                return;
+            }
+
 
             if (string.IsNullOrWhiteSpace(txtFName.Text) || string.IsNullOrWhiteSpace(txtLName.Text))
             {

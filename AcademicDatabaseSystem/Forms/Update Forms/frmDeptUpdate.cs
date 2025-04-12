@@ -1,4 +1,5 @@
 ﻿using AcademicDatabaseSystem.Context;
+using AcademicDatabaseSystem.DataRepository;
 using AcademicDatabaseSystem.Forms;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,8 @@ namespace WinFormsApp
             InitializeComponent();
             FillComboBox();
             lblRowsMsg.Hide();
+            lblDeptName.Hide();
+            lblMng.Hide();
         }
 
         private void FillComboBox()
@@ -68,6 +71,22 @@ namespace WinFormsApp
             bool op3 = toUpdate.ManagerID.ToString() == txtManager.Text;
 
             lblRowsMsg.Hide();
+            lblDeptName.Hide();
+            lblMng.Hide();
+
+            if (!Validations.CheckName(txtDeptName.Text))
+            {
+                lblDeptName.Show();
+                return;
+            }
+
+
+            if (!Validations.CheckNumber(txtManager.Text))
+            {
+                lblMng.Show();
+                return;
+            }
+
 
             if (string.IsNullOrWhiteSpace(txtDeptName.Text) || string.IsNullOrWhiteSpace(txtManager.Text))
             {
