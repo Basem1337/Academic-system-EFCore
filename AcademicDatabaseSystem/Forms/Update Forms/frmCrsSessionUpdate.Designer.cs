@@ -53,6 +53,8 @@
             lblCrsID = new Label();
             lblInsID = new Label();
             lblDate = new Label();
+            comboInst = new ComboBox();
+            comboCrs = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -170,14 +172,14 @@
             // 
             // txtCrsID
             // 
-            txtCrsID.Location = new Point(41, 307);
+            txtCrsID.Location = new Point(680, 82);
             txtCrsID.Name = "txtCrsID";
             txtCrsID.Size = new Size(274, 27);
             txtCrsID.TabIndex = 14;
             // 
             // txtInstID
             // 
-            txtInstID.Location = new Point(41, 225);
+            txtInstID.Location = new Point(437, 36);
             txtInstID.Name = "txtInstID";
             txtInstID.Size = new Size(274, 27);
             txtInstID.TabIndex = 15;
@@ -287,7 +289,7 @@
             lblCrsID.AutoSize = true;
             lblCrsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCrsID.ForeColor = Color.IndianRed;
-            lblCrsID.Location = new Point(41, 333);
+            lblCrsID.Location = new Point(680, 108);
             lblCrsID.Name = "lblCrsID";
             lblCrsID.Size = new Size(198, 23);
             lblCrsID.TabIndex = 47;
@@ -298,7 +300,7 @@
             lblInsID.AutoSize = true;
             lblInsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInsID.ForeColor = Color.IndianRed;
-            lblInsID.Location = new Point(41, 251);
+            lblInsID.Location = new Point(437, 62);
             lblInsID.Name = "lblInsID";
             lblInsID.Size = new Size(214, 23);
             lblInsID.TabIndex = 48;
@@ -309,11 +311,27 @@
             lblDate.AutoSize = true;
             lblDate.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDate.ForeColor = Color.IndianRed;
-            lblDate.Location = new Point(442, 176);
+            lblDate.Location = new Point(442, 180);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(287, 23);
+            lblDate.Size = new Size(334, 23);
             lblDate.TabIndex = 49;
-            lblDate.Text = "Date must be like this format mm/dd/yyyy";
+            lblDate.Text = "Date must be in format \"MM/dd/yyyy hh:mm:ss tt\"";
+            // 
+            // comboInst
+            // 
+            comboInst.FormattingEnabled = true;
+            comboInst.Location = new Point(41, 229);
+            comboInst.Name = "comboInst";
+            comboInst.Size = new Size(275, 28);
+            comboInst.TabIndex = 50;
+            // 
+            // comboCrs
+            // 
+            comboCrs.FormattingEnabled = true;
+            comboCrs.Location = new Point(41, 311);
+            comboCrs.Name = "comboCrs";
+            comboCrs.Size = new Size(275, 28);
+            comboCrs.TabIndex = 51;
             // 
             // frmCrsSessionUpdate
             // 
@@ -321,6 +339,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
+            Controls.Add(comboInst);
+            Controls.Add(comboCrs);
             Controls.Add(lblCrsID);
             Controls.Add(lblInsID);
             Controls.Add(lblDate);
@@ -381,5 +401,7 @@
         private Label lblCrsID;
         private Label lblInsID;
         private Label lblDate;
+        private ComboBox comboInst;
+        private ComboBox comboCrs;
     }
 }

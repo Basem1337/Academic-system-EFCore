@@ -51,6 +51,7 @@
             lblLname = new Label();
             lblFname = new Label();
             lblDeptID = new Label();
+            comboDept = new ComboBox();
             SuspendLayout();
             // 
             // btnBack
@@ -189,7 +190,7 @@
             // txtDeptID
             // 
             txtDeptID.Enabled = false;
-            txtDeptID.Location = new Point(438, 145);
+            txtDeptID.Location = new Point(438, 51);
             txtDeptID.Name = "txtDeptID";
             txtDeptID.Size = new Size(274, 27);
             txtDeptID.TabIndex = 29;
@@ -287,11 +288,19 @@
             lblDeptID.AutoSize = true;
             lblDeptID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDeptID.ForeColor = Color.IndianRed;
-            lblDeptID.Location = new Point(438, 175);
+            lblDeptID.Location = new Point(438, 81);
             lblDeptID.Name = "lblDeptID";
             lblDeptID.Size = new Size(240, 23);
             lblDeptID.TabIndex = 46;
             lblDeptID.Text = "Department ID must a number only";
+            // 
+            // comboDept
+            // 
+            comboDept.FormattingEnabled = true;
+            comboDept.Location = new Point(434, 144);
+            comboDept.Name = "comboDept";
+            comboDept.Size = new Size(275, 28);
+            comboDept.TabIndex = 47;
             // 
             // frmInstInsert
             // 
@@ -299,6 +308,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboDept);
             Controls.Add(lblDeptID);
             Controls.Add(lblSalary);
             Controls.Add(lblPhone);
@@ -352,5 +362,6 @@
         private Label lblLname;
         private Label lblFname;
         private Label lblDeptID;
+        private ComboBox comboDept;
     }
 }

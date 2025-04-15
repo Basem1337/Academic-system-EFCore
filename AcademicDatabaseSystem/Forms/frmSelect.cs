@@ -141,7 +141,7 @@ namespace WinFormsApp
                     break;
                 case "Instructors":
                     db.Instructors.Load();
-                    dgvStd.DataSource = db.Instructors.Local.Where(i => (i.InsFName + " " + i.InsFName) == comboRecord.Text).ToList();
+                    dgvStd.DataSource = db.Instructors.Local.Where(i => (i.InsFName + " " + i.InsLName) == comboRecord.Text).ToList();
                     break;
                 case "Departments":
                     db.Departments.Load();

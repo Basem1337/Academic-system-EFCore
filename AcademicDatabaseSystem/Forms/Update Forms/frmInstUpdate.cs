@@ -12,7 +12,8 @@ namespace WinFormsApp
         {
             InitializeComponent();
             FillComboBox();
-            comboDept.Hide();
+            //comboDept.Hide();
+            txtDeptID.Hide();
             FillDeptComboBox();
             lblRowsMsg.Hide();
             lblFname.Hide();
@@ -101,14 +102,15 @@ namespace WinFormsApp
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            db.Instructors.Include(i => i.Department).Load();
             var toUpdate = db.Instructors.Local.FirstOrDefault(ent => ent.InsID == Convert.ToInt32(comboAll.SelectedValue));
 
             bool op1 = toUpdate.InsFName == txtFName.Text;
             bool op2 = toUpdate.InsLName == txtLName.Text;
             bool op3 = toUpdate.Phone == txtPhone.Text;
             bool op4 = toUpdate.Salary.ToString() == txtSalary.Text;
-            bool op5 = toUpdate.Dept_ID.ToString() == txtDeptID.Text;
-            bool op6 = toUpdate.Dept_ID.ToString() == comboDept.ValueMember;
+            //bool op5 = toUpdate.Dept_ID.ToString() == txtDeptID.Text;
+            bool op6 = toUpdate.Dept_ID.ToString() == comboDept.SelectedValue?.ToString();
 
             lblRowsMsg.Hide();
             lblFname.Hide();
@@ -144,15 +146,15 @@ namespace WinFormsApp
                 return;
             }
 
-            if (!Validations.CheckNumber(txtDeptID.Text))
-            {
-                lblDeptID.Show();
-                return;
-            }
+            //if (!Validations.CheckNumber(txtDeptID.Text))
+            //{
+            //    lblDeptID.Show();
+            //    return;
+            //}
 
 
             if (string.IsNullOrWhiteSpace(txtFName.Text) || string.IsNullOrWhiteSpace(txtLName.Text)
-                || string.IsNullOrWhiteSpace(txtDeptID.Text)
+                //|| string.IsNullOrWhiteSpace(txtDeptID.Text)
                 )
             {
                 lblRowsMsg.ForeColor = Color.Red;
@@ -161,14 +163,14 @@ namespace WinFormsApp
                 return;
             }
 
-            if (!op1 || !op2 || !op3 || !op4 || !op5)
+            if (!op1 || !op2 || !op3 || !op4 || !op6)
             {
                 toUpdate.InsFName = txtFName.Text;
                 toUpdate.InsLName = txtLName.Text;
                 toUpdate.Phone = txtPhone.Text;
                 toUpdate.Salary = Convert.ToDecimal(txtSalary.Text);
-                toUpdate.Dept_ID = Convert.ToInt32(txtDeptID.Text);
-                //toUpdate.Dept_ID = Convert.ToInt32(comboDept.ValueMember);
+                //toUpdate.Dept_ID = Convert.ToInt32(txtDeptID.Text);
+                toUpdate.Dept_ID = Convert.ToInt32(comboDept.SelectedValue);
 
                 dgvAll.EndEdit();
                 db.SaveChanges();

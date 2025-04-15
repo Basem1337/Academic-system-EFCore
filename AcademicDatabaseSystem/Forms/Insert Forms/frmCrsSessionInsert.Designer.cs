@@ -47,6 +47,8 @@
             lblDate = new Label();
             lblInsID = new Label();
             lblCrsID = new Label();
+            comboCrs = new ComboBox();
+            comboInst = new ComboBox();
             SuspendLayout();
             // 
             // btnBack
@@ -170,14 +172,14 @@
             // 
             // txtInsID
             // 
-            txtInsID.Location = new Point(56, 220);
+            txtInsID.Location = new Point(590, 193);
             txtInsID.Name = "txtInsID";
             txtInsID.Size = new Size(274, 27);
             txtInsID.TabIndex = 28;
             // 
             // txtCrsID
             // 
-            txtCrsID.Location = new Point(56, 145);
+            txtCrsID.Location = new Point(590, 118);
             txtCrsID.Name = "txtCrsID";
             txtCrsID.Size = new Size(274, 27);
             txtCrsID.TabIndex = 29;
@@ -231,7 +233,7 @@
             lblInsID.AutoSize = true;
             lblInsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInsID.ForeColor = Color.IndianRed;
-            lblInsID.Location = new Point(56, 246);
+            lblInsID.Location = new Point(590, 219);
             lblInsID.Name = "lblInsID";
             lblInsID.Size = new Size(214, 23);
             lblInsID.TabIndex = 46;
@@ -242,11 +244,27 @@
             lblCrsID.AutoSize = true;
             lblCrsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCrsID.ForeColor = Color.IndianRed;
-            lblCrsID.Location = new Point(56, 171);
+            lblCrsID.Location = new Point(590, 144);
             lblCrsID.Name = "lblCrsID";
             lblCrsID.Size = new Size(198, 23);
             lblCrsID.TabIndex = 46;
             lblCrsID.Text = "Course ID must be a number";
+            // 
+            // comboCrs
+            // 
+            comboCrs.FormattingEnabled = true;
+            comboCrs.Location = new Point(56, 142);
+            comboCrs.Name = "comboCrs";
+            comboCrs.Size = new Size(275, 28);
+            comboCrs.TabIndex = 52;
+            // 
+            // comboInst
+            // 
+            comboInst.FormattingEnabled = true;
+            comboInst.Location = new Point(56, 224);
+            comboInst.Name = "comboInst";
+            comboInst.Size = new Size(275, 28);
+            comboInst.TabIndex = 53;
             // 
             // frmCrsSessionInsert
             // 
@@ -254,6 +272,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboCrs);
+            Controls.Add(comboInst);
             Controls.Add(lblCrsID);
             Controls.Add(lblInsID);
             Controls.Add(lblDate);
@@ -299,5 +319,7 @@
         private Label lblDate;
         private Label lblInsID;
         private Label lblCrsID;
+        private ComboBox comboCrs;
+        private ComboBox comboInst;
     }
 }

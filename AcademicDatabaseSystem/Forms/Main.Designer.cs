@@ -217,6 +217,7 @@
             Controls.Add(btnSelect);
             Name = "frmParent";
             Text = "Main Menu";
+            //Load += frmParent_Load;
             ((System.ComponentModel.ISupportInitialize)picIntro).EndInit();
             ResumeLayout(false);
             PerformLayout();

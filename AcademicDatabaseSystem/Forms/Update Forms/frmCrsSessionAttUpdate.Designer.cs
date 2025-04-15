@@ -49,6 +49,8 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
+            comboStd = new ComboBox();
+            comboCrsSession = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -166,14 +168,14 @@
             // 
             // txtCrsSessionID
             // 
-            txtCrsSessionID.Location = new Point(41, 307);
+            txtCrsSessionID.Location = new Point(667, 99);
             txtCrsSessionID.Name = "txtCrsSessionID";
             txtCrsSessionID.Size = new Size(274, 27);
             txtCrsSessionID.TabIndex = 14;
             // 
             // txtStdID
             // 
-            txtStdID.Location = new Point(41, 225);
+            txtStdID.Location = new Point(667, 17);
             txtStdID.Name = "txtStdID";
             txtStdID.Size = new Size(274, 27);
             txtStdID.TabIndex = 15;
@@ -269,12 +271,30 @@
             label8.TabIndex = 37;
             label8.Text = "*";
             // 
+            // comboStd
+            // 
+            comboStd.FormattingEnabled = true;
+            comboStd.Location = new Point(41, 225);
+            comboStd.Name = "comboStd";
+            comboStd.Size = new Size(275, 28);
+            comboStd.TabIndex = 52;
+            // 
+            // comboCrsSession
+            // 
+            comboCrsSession.FormattingEnabled = true;
+            comboCrsSession.Location = new Point(41, 307);
+            comboCrsSession.Name = "comboCrsSession";
+            comboCrsSession.Size = new Size(275, 28);
+            comboCrsSession.TabIndex = 53;
+            // 
             // frmCrsSessionAttUpdate
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
+            Controls.Add(comboStd);
+            Controls.Add(comboCrsSession);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(separator);
@@ -327,5 +347,7 @@
         private Label label6;
         private Label label7;
         private Label label8;
+        private ComboBox comboStd;
+        private ComboBox comboCrsSession;
     }
 }

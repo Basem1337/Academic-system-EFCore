@@ -43,6 +43,8 @@
             txtGrade = new TextBox();
             label3 = new Label();
             label1 = new Label();
+            comboStd = new ComboBox();
+            comboCrsSession = new ComboBox();
             SuspendLayout();
             // 
             // btnBack
@@ -152,14 +154,14 @@
             // 
             // txtStdID
             // 
-            txtStdID.Location = new Point(56, 382);
+            txtStdID.Location = new Point(587, 194);
             txtStdID.Name = "txtStdID";
             txtStdID.Size = new Size(274, 27);
             txtStdID.TabIndex = 26;
             // 
             // txtCrsSID
             // 
-            txtCrsSID.Location = new Point(56, 302);
+            txtCrsSID.Location = new Point(587, 114);
             txtCrsSID.Name = "txtCrsSID";
             txtCrsSID.Size = new Size(274, 27);
             txtCrsSID.TabIndex = 27;
@@ -200,12 +202,30 @@
             label1.TabIndex = 36;
             label1.Text = "*";
             // 
+            // comboStd
+            // 
+            comboStd.FormattingEnabled = true;
+            comboStd.Location = new Point(56, 381);
+            comboStd.Name = "comboStd";
+            comboStd.Size = new Size(275, 28);
+            comboStd.TabIndex = 54;
+            // 
+            // comboCrsSession
+            // 
+            comboCrsSession.FormattingEnabled = true;
+            comboCrsSession.Location = new Point(56, 301);
+            comboCrsSession.Name = "comboCrsSession";
+            comboCrsSession.Size = new Size(275, 28);
+            comboCrsSession.TabIndex = 55;
+            // 
             // frmCrsSessionAttInsert
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 450);
+            Controls.Add(comboStd);
+            Controls.Add(comboCrsSession);
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(label5);
@@ -243,5 +263,7 @@
         private TextBox txtGrade;
         private Label label3;
         private Label label1;
+        private ComboBox comboStd;
+        private ComboBox comboCrsSession;
     }
 }

@@ -254,7 +254,7 @@
             // 
             // txtDeptID
             // 
-            txtDeptID.Location = new Point(441, 224);
+            txtDeptID.Location = new Point(436, 48);
             txtDeptID.Name = "txtDeptID";
             txtDeptID.Size = new Size(274, 27);
             txtDeptID.TabIndex = 13;
@@ -350,7 +350,7 @@
             // comboDept
             // 
             comboDept.FormattingEnabled = true;
-            comboDept.Location = new Point(440, 68);
+            comboDept.Location = new Point(441, 224);
             comboDept.Name = "comboDept";
             comboDept.Size = new Size(275, 28);
             comboDept.TabIndex = 26;
@@ -360,7 +360,7 @@
             lblDeptID.AutoSize = true;
             lblDeptID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDeptID.ForeColor = Color.IndianRed;
-            lblDeptID.Location = new Point(441, 251);
+            lblDeptID.Location = new Point(436, 74);
             lblDeptID.Name = "lblDeptID";
             lblDeptID.Size = new Size(240, 23);
             lblDeptID.TabIndex = 39;

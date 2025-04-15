@@ -2,6 +2,7 @@
 using AcademicDatabaseSystem.DataRepository;
 using AcademicDatabaseSystem.Forms;
 using AcademicDatabaseSystem.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace WinFormsApp
 {
@@ -11,6 +12,8 @@ namespace WinFormsApp
         public frmInstInsert()
         {
             InitializeComponent();
+            FillDeptComboBox();
+            txtDeptID.Hide();
             lblRowsMsg.Hide();
             lblFname.Hide();
             lblLname.Hide();
@@ -26,10 +29,23 @@ namespace WinFormsApp
             this.Close();
         }
 
+        private void FillDeptComboBox()
+        {
+            db.Instructors.Include(i => i.Department).Load();
+
+            comboDept.DataSource = db.Instructors.Local
+                .Select(i => i.Department)
+                .Distinct()
+                .Select(d => new { DeptName = d.Dept_Name, d.Dept_ID })
+                .ToList();
+
+            comboDept.DisplayMember = "DeptName";
+            comboDept.ValueMember = "Dept_ID";
+        }
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             lblRowsMsg.Hide();
-
             lblFname.Hide();
             lblLname.Hide();
             lblPhone.Hide();
@@ -63,13 +79,15 @@ namespace WinFormsApp
                 return;
             }
 
-            if (!Validations.CheckNumber(txtDeptID.Text) && !string.IsNullOrWhiteSpace(txtDeptID.Text))
-            {
-                lblDeptID.Show();
-                return;
-            }
+            //if (!Validations.CheckNumber(txtDeptID.Text) && !string.IsNullOrWhiteSpace(txtDeptID.Text))
+            //{
+            //    lblDeptID.Show();
+            //    return;
+            //}
 
-            if (string.IsNullOrWhiteSpace(txtFName.Text) || string.IsNullOrWhiteSpace(txtLName.Text) || string.IsNullOrWhiteSpace(txtDeptID.Text))
+            if (string.IsNullOrWhiteSpace(txtFName.Text) || string.IsNullOrWhiteSpace(txtLName.Text)
+                //|| string.IsNullOrWhiteSpace(txtDeptID.Text)
+                )
             {
                 lblRowsMsg.ForeColor = Color.Red;
                 lblRowsMsg.Text = "There are fields that cannot be empty..";
@@ -83,7 +101,7 @@ namespace WinFormsApp
                 InsLName = txtLName.Text,
                 Salary = Convert.ToDecimal(txtSalary.Text),
                 Phone = txtPhone.Text,
-                Dept_ID = Convert.ToInt32(txtDeptID.Text)
+                Dept_ID = Convert.ToInt32(comboDept.SelectedValue)
             };
 
             db.Instructors.Add(newRecord);

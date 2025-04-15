@@ -53,7 +53,7 @@ namespace WinFormsApp
 
             linkLinkedIn.LinkVisited = true;
         }
-        
+
         private void linkGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
@@ -64,7 +64,7 @@ namespace WinFormsApp
 
             linkGitHub.LinkVisited = true;
         }
-        
+
         private void linkBehance_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start(new ProcessStartInfo
@@ -75,5 +75,10 @@ namespace WinFormsApp
 
             linkBehance.LinkVisited = true;
         }
+
+        //private void frmParent_Load(object sender, EventArgs e)
+        //{
+        //    Environment.Exit(0);
+        //}
     }
 }

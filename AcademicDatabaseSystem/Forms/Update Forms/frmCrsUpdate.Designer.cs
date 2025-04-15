@@ -54,6 +54,8 @@
             lblDur = new Label();
             lblDeptID = new Label();
             lblInsID = new Label();
+            comboDept = new ComboBox();
+            comboInst = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dgvAll).BeginInit();
             SuspendLayout();
             // 
@@ -164,7 +166,7 @@
             // 
             // txtDeptID
             // 
-            txtDeptID.Location = new Point(41, 387);
+            txtDeptID.Location = new Point(312, 36);
             txtDeptID.Name = "txtDeptID";
             txtDeptID.Size = new Size(274, 27);
             txtDeptID.TabIndex = 13;
@@ -233,7 +235,7 @@
             // txtInstID
             // 
             txtInstID.AllowDrop = true;
-            txtInstID.Location = new Point(442, 150);
+            txtInstID.Location = new Point(592, 36);
             txtInstID.Name = "txtInstID";
             txtInstID.Size = new Size(274, 27);
             txtInstID.TabIndex = 13;
@@ -310,7 +312,7 @@
             lblDeptID.AutoSize = true;
             lblDeptID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDeptID.ForeColor = Color.IndianRed;
-            lblDeptID.Location = new Point(41, 413);
+            lblDeptID.Location = new Point(312, 62);
             lblDeptID.Name = "lblDeptID";
             lblDeptID.Size = new Size(248, 23);
             lblDeptID.TabIndex = 45;
@@ -321,11 +323,27 @@
             lblInsID.AutoSize = true;
             lblInsID.Font = new Font("Poppins", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInsID.ForeColor = Color.IndianRed;
-            lblInsID.Location = new Point(441, 176);
+            lblInsID.Location = new Point(591, 62);
             lblInsID.Name = "lblInsID";
             lblInsID.Size = new Size(231, 23);
             lblInsID.TabIndex = 45;
             lblInsID.Text = "Instructor ID must be number only";
+            // 
+            // comboDept
+            // 
+            comboDept.FormattingEnabled = true;
+            comboDept.Location = new Point(41, 386);
+            comboDept.Name = "comboDept";
+            comboDept.Size = new Size(275, 28);
+            comboDept.TabIndex = 46;
+            // 
+            // comboInst
+            // 
+            comboInst.FormattingEnabled = true;
+            comboInst.Location = new Point(441, 149);
+            comboInst.Name = "comboInst";
+            comboInst.Size = new Size(275, 28);
+            comboInst.TabIndex = 46;
             // 
             // frmCrsUpdate
             // 
@@ -333,6 +351,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(21, 49, 49);
             ClientSize = new Size(800, 646);
+            Controls.Add(comboInst);
+            Controls.Add(comboDept);
             Controls.Add(lblInsID);
             Controls.Add(lblDeptID);
             Controls.Add(lblDur);
@@ -395,5 +415,7 @@
         private Label lblDur;
         private Label lblDeptID;
         private Label lblInsID;
+        private ComboBox comboDept;
+        private ComboBox comboInst;
     }
 }
